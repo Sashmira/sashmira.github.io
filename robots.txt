@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rrn-colloquial-malayalam.netlify.app/sitemap.xml
+Sitemap: https://sashmira.github.io/sitemap.xml
