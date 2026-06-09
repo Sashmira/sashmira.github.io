@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rrn-colloquial-malayalam.netlify.app/sitemap.xml
