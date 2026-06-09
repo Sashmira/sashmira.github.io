@@ -483,6 +483,7 @@
             <li>COO, Veda Topper International (ISO 9001:2015 certified)</li>
             <li>Top-rated tutor on iTalki, Preply &amp; AmazingTalker</li>
             <li>Creator of the RRN Manglish romanization system for international learners</li>
+            <li>AI-assisted translation researcher — Malayalam–English semantic transfer &amp; prompt engineering</li>
             <li>TEFL, TESOL &amp; CELTA-trained · C2 English (EF SET) · IELTS, PTE &amp; OET teacher-trainer</li>
             <li>Educational content contributor to Malayala Manorama &amp; Mathrubhumi</li>
           </ul>
@@ -506,9 +507,11 @@
         <span>CELTA-Trained</span>
         <span>C2 English (EF SET)</span>
         <span>IELTS · PTE · OET Teacher-Trainer</span>
+        <span>AI-Assisted Translation Researcher</span>
+        <span>Verified Educator — Unacademy</span>
         <span>15+ Years International Teaching</span>
       </div>
-      <p class="cred-feature reveal">📚 Educational content contributor to <b>Malayala Manorama</b> &amp; <b>Mathrubhumi</b> · Published author of educational books · Taught learners across the <b>USA, Canada, UK, Australia, New Zealand &amp; Europe</b>.</p>
+      <p class="cred-feature reveal">📚 Educational content contributor to <b>Malayala Manorama</b> &amp; <b>Mathrubhumi</b> · Published author of educational books · AI-assisted Malayalam–English translation researcher · Also taught on <b>Outschool, Classgap &amp; Varsity Tutors</b> · Former <b>Unacademy</b> educator &amp; <b>Cuemath</b> international maths trainer · Taught learners across the <b>USA, Canada, UK, Australia, New Zealand &amp; Europe</b>.</p>
     </div>
   </section>
   <!-- WHO IT'S FOR -->
@@ -1032,13 +1035,13 @@
       form.style.display='none';
       var s=document.getElementById('lmSuccess'); if(s){s.style.display='block';}
       var a=document.createElement('a'); a.href='/100-malayalam-phrases.pdf'; a.setAttribute('download','100-Malayalam-Phrases.pdf');
-      document.body.appendChild(a); a.click(); a.remove();
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
     });
     return false;
   }
   function handleBooking(e){
     e.preventDefault(); var form=e.target;
-    postForm(form,'New lesson booking request - RRN Malayalam').finally(function(){
+    postForm(form,'New direct booking request - RRN Malayalam').finally(function(){
       form.style.display='none';
       var s=document.getElementById('bookSuccess'); if(s){s.style.display='block';}
     });
