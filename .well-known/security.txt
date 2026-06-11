@@ -1,6 +1,6 @@
-# Security contact for sashmira.github.io
+# Security contact for speakmalayalam.com
 # If you discover a security issue, please report it responsibly.
 Contact: mailto:dr.reshmi.linguist@gmail.com
 Expires: 2027-06-09T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://sashmira.github.io/.well-known/security.txt
+Canonical: https://speakmalayalam.com/.well-known/security.txt
