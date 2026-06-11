@@ -1,0 +1,24 @@
+{
+ "name": "Speak Malayalam \u2014 Dr. Reshmi R Nair",
+ "short_name": "SpeakMalayalam",
+ "description": "Learn real colloquial Malayalam \u2014 free guides, audio phrasebook, 30-day course and one-to-one lessons.",
+ "start_url": "/",
+ "scope": "/",
+ "display": "standalone",
+ "background_color": "#FCF9F2",
+ "theme_color": "#0E2240",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}
