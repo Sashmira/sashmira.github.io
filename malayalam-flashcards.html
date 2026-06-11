@@ -83,6 +83,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
 </script>
+<link rel="manifest" href="/manifest.json">
 </head>
 <body>
 <header><nav>
@@ -149,4 +150,5 @@ function pick(btn,o,c){var all=document.querySelectorAll('#qOpts button');all.fo
 if('speechSynthesis' in window){speechSynthesis.onvoiceschanged=function(){};speechSynthesis.getVoices();}
 draw();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
 </body></html>

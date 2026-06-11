@@ -83,6 +83,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
 </script>
+<link rel="manifest" href="/manifest.json">
 </head>
 <body>
 <header><nav>
@@ -104,4 +105,54 @@ gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
 <p>&copy; 2026 Dr. Reshmi R Nair &middot; <a href="/">RRN Colloquial Malayalam</a> &middot; <a href="/blog.html">All Guides</a></p>
 <p style="margin-top:8px">Learn to speak Malayalam online &mdash; for beginners, NRIs &amp; learners worldwide.</p>
 </div></footer>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+
+<script>
+(function(){
+  var KEY='sm30';
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY)||'{}'); } catch(e){ return {}; } }
+  function save(d){ try { localStorage.setItem(KEY, JSON.stringify(d)); } catch(e){} }
+  function today(){ return new Date().toISOString().slice(0,10); }
+  function streak(d){
+    var dates = {}; Object.keys(d).forEach(function(k){ dates[d[k]] = 1; });
+    var n = 0; var cur = new Date();
+    if (!dates[cur.toISOString().slice(0,10)]) cur.setDate(cur.getDate()-1);
+    while (dates[cur.toISOString().slice(0,10)]) { n++; cur.setDate(cur.getDate()-1); }
+    return n;
+  }
+  var art = document.querySelector('article'); if(!art) return;
+  var lis = [].slice.call(art.querySelectorAll('li')).filter(function(li){
+    var st = li.querySelector('strong'); return st && /^Day \d+:/.test(st.textContent);
+  });
+  if (!lis.length) return;
+  var bar = document.createElement('div');
+  bar.style.cssText = 'position:sticky;top:74px;z-index:5;background:#0E2240;color:#FCF9F2;border-radius:12px;padding:12px 18px;margin:0 0 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;box-shadow:0 8px 24px rgba(14,34,64,.25)';
+  art.insertBefore(bar, art.children[1]);
+  function render(){
+    var d = load(); var done = Object.keys(d).length;
+    bar.innerHTML = '<b style="font-size:17px">' + done + '/30 days done</b>' +
+      '<span style="font-size:15px">🔥 ' + streak(d) + '-day streak</span>' +
+      '<span style="flex:1;min-width:120px;height:8px;background:rgba(252,249,242,.25);border-radius:6px;overflow:hidden"><span style="display:block;height:100%;width:' + Math.round(done/30*100) + '%;background:#C9A84C"></span></span>' +
+      (done >= 30 ? '<b style="color:#C9A84C">Course complete! 🎉</b>' : '');
+    lis.forEach(function(li){
+      var st = li.querySelector('strong');
+      var num = st.textContent.match(/Day (\d+):/)[1];
+      var btn = li.querySelector('.sm30btn');
+      if (!btn) {
+        btn = document.createElement('button');
+        btn.className = 'sm30btn';
+        btn.style.cssText = 'margin-right:9px;width:26px;height:26px;border-radius:50%;border:2px solid #C9A84C;background:#fff;cursor:pointer;font-size:14px;vertical-align:middle;line-height:1';
+        btn.onclick = function(){ var dd = load(); if (dd[num]) delete dd[num]; else dd[num] = today(); save(dd); render(); };
+        li.insertBefore(btn, li.firstChild);
+      }
+      var dd = load();
+      btn.textContent = dd[num] ? '✓' : '';
+      btn.style.background = dd[num] ? '#177E70' : '#fff';
+      btn.style.color = '#fff';
+      btn.style.borderColor = dd[num] ? '#177E70' : '#C9A84C';
+    });
+  }
+  render();
+})();
+</script>
 </body></html>

@@ -310,6 +310,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
 </script>
+<link rel="manifest" href="/manifest.json">
 </head>
 <body>
 <a href="#top" class="skip">Skip to content</a>
@@ -1048,5 +1049,6 @@ gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
   }
   window.handleLead=handleLead; window.handleBooking=handleBooking;
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
 </body>
 </html>
