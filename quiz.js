@@ -84,7 +84,8 @@
     var key = 'smq_' + location.pathname;
     var first = !localStorage.getItem(key);
     if (first) {
-      try { var k = 'smquiz', d = JSON.parse(localStorage.getItem(k) || '{}'); d.xp = (d.xp || 0) + correct * 10; d.done = (d.done || 0) + 1; localStorage.setItem(k, JSON.stringify(d)); localStorage.setItem(key, '1'); } catch (e) { }
+      try { var k = 'smquiz', d = JSON.parse(localStorage.getItem(k) || '{}'); d.xp = (d.xp || 0) + correct * 10; d.done = (d.done || 0) + 1; localStorage.setItem(k, JSON.stringify(d)); localStorage.setItem(key, '1'); } catch (e) { } }
+    try { var ak = 'smact', ad = JSON.parse(localStorage.getItem(ak) || '{}'); ad[new Date().toISOString().slice(0,10)] = 1; localStorage.setItem(ak, JSON.stringify(ad)); } catch (e2) {
     }
     done.style.display = 'block';
     done.innerHTML = 'You scored ' + correct + '/' + total + '. '

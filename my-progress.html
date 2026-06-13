@@ -98,45 +98,80 @@ gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
 <main>
 <div class="hero-b"><div class="wrap"><div class="ey">Your dashboard</div><h1>My Malayalam Progress</h1><div class="meta">Streak &middot; days &middot; XP &middot; badges &mdash; all saved on your device</div></div></div><div class="wrap"><article>
 <div id="dash">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:6px 0 24px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:6px 0 18px">
     <div style="background:linear-gradient(135deg,#0E2240,#1a3a64);color:#FCF9F2;border-radius:16px;padding:22px;text-align:center">
-      <div id="d-streak" style="font-family:Georgia,serif;font-size:46px;line-height:1;color:#C9A84C">0</div>
+      <div id="d-streak" style="font-family:var(--display);font-size:46px;line-height:1;color:#C9A84C">0</div>
       <div style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px">&#128293; Day streak</div></div>
+    <div style="background:linear-gradient(135deg,#177E70,#0f5a50);color:#fff;border-radius:16px;padding:22px;text-align:center">
+      <div id="d-level" style="font-family:var(--display);font-size:46px;line-height:1">1</div>
+      <div style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px">&#11088; Level</div></div>
     <div style="background:#fff;border:1px solid var(--gold-line);border-radius:16px;padding:22px;text-align:center">
-      <div id="d-days" style="font-family:Georgia,serif;font-size:46px;line-height:1;color:var(--navy)">0/30</div>
+      <div id="d-xp" style="font-family:var(--display);font-size:46px;line-height:1;color:#177E70">0</div>
+      <div style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;color:var(--muted)">Total XP</div></div>
+    <div style="background:#fff;border:1px solid var(--gold-line);border-radius:16px;padding:22px;text-align:center">
+      <div id="d-days" style="font-family:var(--display);font-size:46px;line-height:1;color:var(--navy)">0/30</div>
       <div style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;color:var(--muted)">Course days</div></div>
-    <div style="background:#fff;border:1px solid var(--gold-line);border-radius:16px;padding:22px;text-align:center">
-      <div id="d-xp" style="font-family:Georgia,serif;font-size:46px;line-height:1;color:#177E70">0</div>
-      <div style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;color:var(--muted)">XP earned</div></div>
-    <div style="background:#fff;border:1px solid var(--gold-line);border-radius:16px;padding:22px;text-align:center">
-      <div id="d-words" style="font-family:Georgia,serif;font-size:46px;line-height:1;color:var(--navy)">0</div>
-      <div style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;color:var(--muted)">Phrases learned</div></div>
   </div>
-  <div style="background:#E7DFCC;border-radius:10px;height:14px;overflow:hidden;margin:0 0 6px"><div id="d-bar" style="height:100%;width:0;background:linear-gradient(90deg,#C9A84C,#8A6D1F);transition:width .6s"></div></div>
-  <p id="d-msg" style="text-align:center;font-weight:700;color:var(--navy);margin:0 0 26px"></p>
+  <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:4px"><span id="d-levlabel">Level 1</span><span id="d-levnext"></span></div>
+  <div style="background:#E7DFCC;border-radius:10px;height:14px;overflow:hidden;margin:0 0 22px"><div id="d-bar" style="height:100%;width:0;background:linear-gradient(90deg,#C9A84C,#8A6D1F);transition:width .6s"></div></div>
+  <div style="background:#fff;border:1px solid var(--gold-line);border-radius:16px;padding:20px;margin:0 0 18px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <div><b style="color:var(--navy);font-size:17px">&#127919; Daily goal</b><div id="d-goal" style="font-size:14px;color:var(--muted)"></div></div>
+      <div id="d-goalring" style="font-family:var(--display);font-size:20px;font-weight:600"></div>
+    </div>
+    <div id="d-week" style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"></div>
+  </div>
+  <div id="d-freezebox" style="background:#EAF3FF;border:1px solid #BCDAF5;border-radius:14px;padding:16px 18px;margin:0 0 18px;display:none"></div>
+  <p id="d-msg" style="text-align:center;font-weight:700;color:var(--navy);margin:0 0 24px"></p>
+  <h2>Quick actions</h2>
+  <div id="d-actions" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin:8px 0 26px"></div>
   <h2>Your badges</h2>
   <div id="d-badges" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0 26px"></div>
   <p style="text-align:center" id="d-cta"></p>
 </div>
 <script>
 (function(){
-  function load(){try{return JSON.parse(localStorage.getItem("sm30")||"{}")}catch(e){return{}}}
-  function streak(d){var s={};Object.keys(d).forEach(function(k){s[d[k]]=1});var n=0,c=new Date();
-    if(!s[c.toISOString().slice(0,10)])c.setDate(c.getDate()-1);
-    while(s[c.toISOString().slice(0,10)]){n++;c.setDate(c.getDate()-1)}return n;}
-  var BADGES=[[1,"&#127793;","First Step","Completed Day 1"],[3,"&#128293;","On a Roll","3-day streak"],
-    [7,"&#11088;","Week Warrior","7 days done"],[15,"&#9968;","Halfway Hero","15 days done"],
-    [21,"&#128170;","Habit Formed","21 days done"],[30,"&#127881;","Graduate","All 30 days!"]];
-  var d=load(),done=Object.keys(d).length,st=streak(d);var qx=0;try{qx=(JSON.parse(localStorage.getItem("smquiz")||"{}").xp)||0}catch(e){}var xp=done*100+st*20+qx,words=done*5;
   var $=function(i){return document.getElementById(i)};
-  $("d-streak").textContent=st;$("d-days").textContent=done+"/30";$("d-xp").textContent=xp;$("d-words").textContent=words;
-  $("d-bar").style.width=Math.round(done/30*100)+"%";
-  $("d-msg").textContent=done===0?"Start Day 1 and watch this fill up! 💪":done>=30?"Course complete — you legend! 🎉":"Keep going — "+(30-done)+" days to graduation!";
-  $("d-badges").innerHTML=BADGES.map(function(b){var got=done>=b[0]||(b[0]<=3&&st>=b[0]);
-    return '<div style="text-align:center;padding:16px 10px;border-radius:14px;border:1px solid '+(got?"#C9A84C":"#E7DFCC")+';background:'+(got?"#FBF6E9":"#fff")+';opacity:'+(got?1:.45)+'"><div style="font-size:34px">'+b[1]+'</div><b style="display:block;color:var(--navy);margin-top:4px">'+b[2]+'</b><span style="font-size:12.5px;color:var(--muted)">'+b[3]+'</span></div>';}).join("");
-  // next undone day
-  var nxt=1;for(var i=1;i<=30;i++){if(!d[i]){nxt=i;break}if(i===30)nxt=30;}
-  $("d-cta").innerHTML=(done<30?'<a href="/malayalam-day-'+(nxt<10?"0"+nxt:nxt)+'.html" style="display:inline-block;background:#0E2240;color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:800;font-size:17px">Continue → Day '+nxt+'</a>':'<a href="'+'/malayalam-level-test.html" style="display:inline-block;background:#177E70;color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:800;font-size:17px">Take the level test →</a>')+'<br><span style="font-size:13px;color:var(--muted)">Progress saved on this device. Learning on a new phone? Just continue — it tracks fresh.</span>';
+  function P(k){try{return JSON.parse(localStorage.getItem(k)||"{}")}catch(e){return{}}}
+  function ds(d){return d.toISOString().slice(0,10)}
+  var today=new Date();
+  var sm30=P("sm30"),smquiz=P("smquiz"),smact=P("smact"),smfreeze=P("smfreeze");
+  var act={};Object.keys(sm30).forEach(function(k){act[sm30[k]]=1});Object.keys(smact).forEach(function(k){act[k]=1});
+  var wf={};Object.keys(act).forEach(function(k){wf[k]=1});Object.keys(smfreeze).forEach(function(k){wf[k]=1});
+  function streak(set){var n=0,c=new Date();if(!set[ds(c)])c.setDate(c.getDate()-1);while(set[ds(c)]){n++;c.setDate(c.getDate()-1)}return n;}
+  var st=streak(wf),done=Object.keys(sm30).length,qx=smquiz.xp||0,qdone=smquiz.done||0;
+  var xp=done*100+st*20+qx,level=Math.floor(xp/150)+1,into=xp%150,words=done*5;
+  var activeToday=!!act[ds(today)],totalActive=Object.keys(act).length;
+  var availFreeze=Math.max(0,Math.floor(totalActive/5)-Object.keys(smfreeze).length);
+  $("d-streak").textContent=st;$("d-level").textContent=level;$("d-xp").textContent=xp;$("d-days").textContent=done+"/30";
+  $("d-levlabel").textContent="Level "+level+" · "+xp+" XP";$("d-levnext").textContent=(150-into)+" XP to Level "+(level+1);
+  $("d-bar").style.width=Math.round(into/150*100)+"%";
+  $("d-goal").textContent=activeToday?"Done for today — streak protected!":"Do one lesson or quiz today to keep your streak.";
+  $("d-goalring").innerHTML=activeToday?'<span style="color:#177E70">✓ Complete</span>':'<span style="color:#C9A84C">○ Pending</span>';
+  var ws="",names=["Su","Mo","Tu","We","Th","Fr","Sa"];
+  for(var i=6;i>=0;i--){var dd=new Date();dd.setDate(dd.getDate()-i);var k=ds(dd);var fz=smfreeze[k]&&!act[k];var on=!!act[k]||!!smfreeze[k];
+    ws+='<div style="text-align:center;font-size:11px;color:var(--muted)"><div style="width:34px;height:34px;border-radius:50%;display:grid;place-items:center;margin:0 auto 3px;background:'+(on?(fz?"#7FB3F0":"#177E70"):"#E7DFCC")+';color:'+(on?"#fff":"#aaa")+';font-weight:700">'+(on?(fz?"❄":"✓"):"·")+'</div>'+names[dd.getDay()]+'</div>';}
+  $("d-week").innerHTML=ws;
+  var c1=new Date();c1.setDate(c1.getDate()-1);var yk=ds(c1);var c2=new Date();c2.setDate(c2.getDate()-2);var dbk=ds(c2);
+  var fb=$("d-freezebox");
+  if(!act[yk]&&!smfreeze[yk]&&(act[dbk]||smfreeze[dbk])&&availFreeze>0){
+    fb.style.display="block";
+    fb.innerHTML='<b style="color:#0E2240">❄️ Streak freeze available</b><p style="margin:6px 0 10px;font-size:14px;color:#33506e">You missed yesterday, but you have '+availFreeze+' freeze'+(availFreeze>1?"s":"")+'. Use one to save your '+st+'-day streak.</p><button id="d-usefreeze" style="background:#0E2240;color:#fff;border:0;padding:10px 20px;border-radius:30px;font-weight:700;cursor:pointer">Use a freeze ❄️</button>';
+    $("d-usefreeze").onclick=function(){var f=P("smfreeze");f[yk]=1;try{localStorage.setItem("smfreeze",JSON.stringify(f))}catch(e){}location.reload();};
+  }else if(availFreeze>0){
+    fb.style.display="block";
+    fb.innerHTML='<b style="color:#0E2240">❄️ '+availFreeze+' streak freeze'+(availFreeze>1?"s":"")+' banked</b><p style="margin:6px 0 0;font-size:14px;color:#33506e">Miss a day? Come back and use a freeze to keep your streak alive. You earn one every 5 active days.</p>';
+  }
+  $("d-msg").textContent=(done===0&&qdone===0)?"Start Day 1 or take a quiz and watch this fill up!":done>=30?"Course complete — you legend!":"Keep going — "+(30-done)+" days to graduation!";
+  var QZ=["malayalam-greetings","malayalam-food-words","malayalam-numbers","malayalam-verbs","malayalam-family-words","malayalam-colours","malayalam-animals","malayalam-body-parts","malayalam-travel-phrases","malayalam-shopping"];
+  var rq="/"+QZ[(Math.random()*QZ.length)|0]+".html";
+  var nxt=1;for(var j=1;j<=30;j++){if(!sm30[j]){nxt=j;break}if(j===30)nxt=30;}
+  var QA=[["/malayalam-day-"+(nxt<10?"0"+nxt:nxt)+".html","▶️ Continue lesson","Day "+nxt+" of 30"],["/malayalam-practice.html","🎮 Practice Arena","Topic quizzes + XP"],["/malayalam-flashcards.html","🃏 Flashcards","Flip &amp; learn"],[rq,"🎲 Random quiz","Test a random topic"]];
+  $("d-actions").innerHTML=QA.map(function(a){return '<a href="'+a[0]+'" style="display:block;background:#fff;border:1px solid var(--gold-line);border-radius:14px;padding:16px;text-decoration:none;color:var(--navy)"><b style="font-size:15.5px">'+a[1]+'</b><div style="font-size:13px;color:var(--muted);margin-top:3px">'+a[2]+'</div></a>';}).join("");
+  var stats={days:done,streak:st,quizzes:qdone,xp:xp,level:level};
+  var BADGES=[{e:"🌱",n:"First Step",d:"Complete Day 1",t:function(s){return s.days>=1}},{e:"🔥",n:"On a Roll",d:"3-day streak",t:function(s){return s.streak>=3}},{e:"⭐",n:"Week Warrior",d:"7-day streak",t:function(s){return s.streak>=7}},{e:"⛰️",n:"Halfway Hero",d:"15 lessons",t:function(s){return s.days>=15}},{e:"🎓",n:"Graduate",d:"All 30 lessons",t:function(s){return s.days>=30}},{e:"🧠",n:"Quiz Rookie",d:"5 quizzes",t:function(s){return s.quizzes>=5}},{e:"🏆",n:"Quiz Master",d:"20 quizzes",t:function(s){return s.quizzes>=20}},{e:"💎",n:"High Scorer",d:"500 XP",t:function(s){return s.xp>=500}},{e:"👑",n:"XP Legend",d:"1000 XP",t:function(s){return s.xp>=1000}},{e:"🚀",n:"Rising Star",d:"Reach Level 5",t:function(s){return s.level>=5}}];
+  $("d-badges").innerHTML=BADGES.map(function(b){var got=b.t(stats);return '<div style="text-align:center;padding:16px 10px;border-radius:14px;border:1px solid '+(got?"#C9A84C":"#E7DFCC")+';background:'+(got?"#FBF6E9":"#fff")+';opacity:'+(got?1:.42)+'"><div style="font-size:32px">'+b.e+'</div><b style="display:block;color:var(--navy);margin-top:4px">'+b.n+'</b><span style="font-size:12.5px;color:var(--muted)">'+b.d+'</span></div>';}).join("");
+  $("d-cta").innerHTML=(done<30?'<a href="/malayalam-day-'+(nxt<10?"0"+nxt:nxt)+'.html" style="display:inline-block;background:#0E2240;color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:800;font-size:17px">Continue → Day '+nxt+'</a>':'<a href="/malayalam-level-test.html" style="display:inline-block;background:#177E70;color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:800;font-size:17px">Take the level test →</a>')+'<br><span style="font-size:13px;color:var(--muted)">Everything saves on this device. New phone? Just keep learning — it tracks fresh.</span>';
 })();
 </script>
 <div class="cta-box"><h3>Turn this progress into real conversations</h3><p>You&rsquo;re building the habit &mdash; brilliant. A weekly live lesson turns these streaks into actual fluency, with your pronunciation fixed in real time.</p>
