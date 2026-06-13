@@ -1043,14 +1043,14 @@ gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
   }
   window.copyUPI=copyUPI;
   var FORM_ENDPOINT='https://formsubmit.co/ajax/reshmisatish143@gmail.com';
-  function postForm(form, subject){
+  function postForm(form, subject, autoresp){
     var fd=new FormData(form), obj={}; fd.forEach(function(v,k){obj[k]=v;});
-    obj._subject=subject; obj._template='table';
+    obj._subject=subject; obj._template='table'; if(autoresp){obj._autoresponse=autoresp;}
     return fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(obj)});
   }
   function handleLead(e){
     e.preventDefault(); var form=e.target;
-    postForm(form,'New free-PDF download (lead) - RRN Malayalam').finally(function(){
+    postForm(form,'New free-PDF download (lead) - RRN Malayalam','Namaskaram! Thank you for downloading from speakmalayalam.com. If your download did not start, grab your free guide here: https://speakmalayalam.com/100-malayalam-phrases.pdf  Start speaking today: free 30-Day Course https://speakmalayalam.com/malayalam-day-01.html , audio phrasebook https://speakmalayalam.com/malayalam-phrasebook.html , 2-minute level test https://speakmalayalam.com/malayalam-level-test.html . Ready for live practice? Reply here or WhatsApp +91 98468 87225. Kaanaam! Dr. Reshmi R Nair, PhD').finally(function(){
       form.style.display='none';
       var s=document.getElementById('lmSuccess'); if(s){s.style.display='block';}
       var a=document.createElement('a'); a.href='/100-malayalam-phrases.pdf'; a.setAttribute('download','100-Malayalam-Phrases.pdf');
@@ -1060,7 +1060,7 @@ gtag('config', 'G-YZLHEM12DS', { 'anonymize_ip': true });
   }
   function handleBooking(e){
     e.preventDefault(); var form=e.target;
-    postForm(form,'New direct booking request - RRN Malayalam').finally(function(){
+    postForm(form,'New direct booking request - RRN Malayalam','Namaskaram! Thank you for your lesson request - I have received it and will email you very soon to confirm your slot and payment details. If it is urgent, WhatsApp me on +91 98468 87225. Looking forward to teaching you! Dr. Reshmi R Nair, PhD - speakmalayalam.com').finally(function(){
       form.style.display='none';
       var s=document.getElementById('bookSuccess'); if(s){s.style.display='block';}
     });
