@@ -136,7 +136,7 @@ function flip(){var c=rec();face=!face;if(face){document.getElementById('cFront'
 function next(){pos=(pos+1)%order.length;draw();}
 function prev(){pos=(pos-1+order.length)%order.length;draw();}
 function shuffle(){order.sort(function(){return Math.random()-0.5;});pos=0;draw();}
-function speak(){var c=rec();try{var u=new SpeechSynthesisUtterance(c.m);u.lang='ml-IN';var vs=speechSynthesis.getVoices();var v=vs.filter(function(x){return /ml|malay/i.test(x.lang);})[0];if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
+function speak(){var c=rec();var MP3={"Namaskaram":"namaskaram","Nandi":"nandi","Amma":"amma","Achan":"achan","Sukham":"sukham","Sukhamaano?":"sukhamaano"};var f=MP3[c.r];if(f){try{var a=new Audio('/audio/'+f+'.mp3');a.play();return;}catch(e){}}try{var vs=(window.speechSynthesis&&speechSynthesis.getVoices())||[];var ml=vs.filter(function(x){return /ml|malay/i.test(x.lang);})[0];var u;if(ml){u=new SpeechSynthesisUtterance(c.m);u.lang='ml-IN';u.voice=ml;}else{u=new SpeechSynthesisUtterance(c.r);u.lang='en-IN';u.rate=0.85;}speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
 function showF(){document.getElementById('flash').style.display='block';document.getElementById('quiz').style.display='none';document.getElementById('tabF').classList.add('on');document.getElementById('tabQ').classList.remove('on');}
 function showQ(){document.getElementById('flash').style.display='none';document.getElementById('quiz').style.display='block';document.getElementById('tabQ').classList.add('on');document.getElementById('tabF').classList.remove('on');}
 var qi=0,qscore=0,qset=[];
