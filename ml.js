@@ -150,3 +150,75 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 })();
+
+/* ───────────────────────────────────────────────────────────────────────
+ * Tier-1 upgrades (all opt-in / additive, never alter default layout):
+ *  (A) Audio playback-speed controls on every <audio>
+ *  (B) Copy + Share buttons on phrase boxes (.phrase)
+ *  (C) Dark-mode toggle (default OFF; remembers choice). Default light view
+ *      is never changed for anyone unless they click the moon button.
+ * ─────────────────────────────────────────────────────────────────────── */
+(function () {
+  function ready(fn){ if(document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded',fn); }
+
+  ready(function () {
+    /* (A) audio speed */
+    try {
+      document.querySelectorAll('audio').forEach(function (au) {
+        if (au.dataset.smSpeed) return; au.dataset.smSpeed = '1';
+        var bar = document.createElement('div');
+        bar.style.cssText = 'display:flex;gap:6px;align-items:center;margin:4px 0 10px;font-size:12.5px;color:#5A6478';
+        bar.innerHTML = '<span style="font-weight:600">Speed:</span>';
+        [['0.75×',0.75],['1×',1],['1.25×',1.25]].forEach(function (p) {
+          var b = document.createElement('button');
+          b.type='button'; b.textContent=p[0];
+          b.style.cssText='padding:3px 9px;border-radius:8px;border:1px solid rgba(201,168,76,.5);background:'+(p[1]===1?'#C9A84C':'#fff')+';color:#0E2240;cursor:pointer;font-weight:700;font-size:12px';
+          b.onclick=function(){ au.playbackRate=p[1]; Array.prototype.forEach.call(bar.querySelectorAll('button'),function(x){x.style.background='#fff';}); b.style.background='#C9A84C'; };
+          bar.appendChild(b);
+        });
+        au.parentNode.insertBefore(bar, au.nextSibling);
+      });
+    } catch (_) {}
+
+    /* (B) copy + share on phrase boxes */
+    try {
+      var ph = document.querySelector('.phrase');
+      if (ph && !ph.dataset.smTools) {
+        ph.dataset.smTools = '1';
+        var row = document.createElement('div');
+        row.style.cssText='display:flex;gap:10px;margin-top:12px';
+        var txt = (ph.innerText||'').replace(/\s+/g,' ').trim();
+        var mk = function(label){ var b=document.createElement('button'); b.type='button'; b.textContent=label;
+          b.style.cssText='padding:8px 14px;border-radius:9px;border:1px solid rgba(201,168,76,.5);background:#fff;color:#0E2240;font-weight:700;font-size:13.5px;cursor:pointer'; return b; };
+        var cBtn=mk('⧉ Copy'), sBtn=mk('↗ Share');
+        cBtn.onclick=function(){ (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){cBtn.textContent='✓ Copied';setTimeout(function(){cBtn.textContent='⧉ Copy';},1500);}).catch(function(){}); };
+        sBtn.onclick=function(){ var d={title:document.title,text:txt,url:location.href}; if(navigator.share){navigator.share(d).catch(function(){});} else { (navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){sBtn.textContent='✓ Link copied';setTimeout(function(){sBtn.textContent='↗ Share';},1500);}).catch(function(){}); } };
+        row.appendChild(cBtn); row.appendChild(sBtn); ph.appendChild(row);
+      }
+    } catch (_) {}
+
+    /* (C) dark-mode toggle — opt-in, default OFF */
+    try {
+      var DK='sm_theme';
+      var css = 'html[data-theme="dark"] body{background:#0f1722 !important;color:#dbe2ec !important}'
+        + 'html[data-theme="dark"] article p,html[data-theme="dark"] article li,html[data-theme="dark"] .en,html[data-theme="dark"] td,html[data-theme="dark"] th,html[data-theme="dark"] .lead,html[data-theme="dark"] p{color:#c2ccda !important}'
+        + 'html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] h4{color:#F0E6C8 !important}'
+        + 'html[data-theme="dark"] .phrase,html[data-theme="dark"] .idx-card,html[data-theme="dark"] .authorbox,html[data-theme="dark"] .card,html[data-theme="dark"] table,html[data-theme="dark"] .ref{background:#16202e !important;border-color:rgba(201,168,76,.3) !important}'
+        + 'html[data-theme="dark"] header{background:rgba(15,23,34,.92) !important;border-bottom-color:rgba(255,255,255,.08) !important}'
+        + 'html[data-theme="dark"] .nav-links a,html[data-theme="dark"] .brand{color:#dbe2ec !important}'
+        + 'html[data-theme="dark"] a{color:#7FD0C2 !important}'
+        + 'html[data-theme="dark"] .nav-links a.btn{color:#0E2240 !important}';
+      var st=document.createElement('style'); st.id='sm-dark-css'; st.textContent=css; document.head.appendChild(st);
+      function apply(t){ if(t==='dark') document.documentElement.setAttribute('data-theme','dark'); else document.documentElement.removeAttribute('data-theme'); }
+      var saved=''; try{saved=localStorage.getItem(DK)||'';}catch(_){}
+      apply(saved);
+      var btn=document.createElement('button');
+      btn.type='button'; btn.setAttribute('aria-label','Toggle dark mode');
+      btn.style.cssText='position:fixed;bottom:22px;left:22px;z-index:80;width:48px;height:48px;border-radius:50%;border:1px solid rgba(201,168,76,.5);background:#0E2240;color:#C9A84C;font-size:20px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)';
+      function setIcon(){ btn.textContent = document.documentElement.getAttribute('data-theme')==='dark' ? '☀️' : '🌙'; }
+      setIcon();
+      btn.onclick=function(){ var dark=document.documentElement.getAttribute('data-theme')!=='dark'; apply(dark?'dark':''); try{localStorage.setItem(DK,dark?'dark':'light');}catch(_){ } setIcon(); };
+      document.body.appendChild(btn);
+    } catch (_) {}
+  });
+})();
