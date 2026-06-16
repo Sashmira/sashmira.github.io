@@ -110,7 +110,7 @@
             '<input id="sm-pop-email" type="email" name="email" required placeholder="you@email.com" autocomplete="email" style="padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:' + CREAM + ';font-size:16px;outline:none">' +
             '<button type="submit" style="padding:12px 16px;border:0;border-radius:10px;background:' + GOLD + ';color:' + INK + ';font-weight:800;font-size:15.5px;cursor:pointer">Send me the free PDF →</button>' +
           '</form>' +
-          '<p style="margin:10px 0 0;font-size:11.5px;color:#9DA8BC">No spam. Unsubscribe anytime. — Dr. Reshmi R Nair, PhD</p>' +
+          '<p style="margin:10px 0 0;font-size:11.5px;color:#9DA8BC">No spam. Unsubscribe anytime. — Reshmi R Nair, Malayalam Linguist</p>' +
         '</div>' +
       '</div>';
 
