@@ -222,3 +222,44 @@
     } catch (_) {}
   });
 })();
+
+/* ───────────────────────────────────────────────────────────────────────
+ * Wire the new practice tools (pronounce / stories / listening quiz) into
+ * the EXISTING progress system that /my-progress.html reads:
+ *   smquiz = {xp, done}   ·   smact = { "YYYY-MM-DD": 1 }  (streak days)
+ * Marks today active on real interaction + banks a little XP once/day/tool.
+ * ─────────────────────────────────────────────────────────────────────── */
+(function () {
+  var p = location.pathname;
+  var isTool = /pronounce|malayalam-stories|malayalam-listening-quiz/.test(p);
+  if (!isTool) return;
+  function today(){ return new Date().toISOString().slice(0,10); }
+  function markActive(){ try{ var k='smact', d=JSON.parse(localStorage.getItem(k)||'{}'); d[today()]=1; localStorage.setItem(k,JSON.stringify(d)); }catch(_){} }
+  function bankXP(n, tag){
+    try{
+      var stamp='smxp_'+tag+'_'+today();
+      if(localStorage.getItem(stamp)) return;          // once per day per tool
+      var d=JSON.parse(localStorage.getItem('smquiz')||'{}');
+      d.xp=(d.xp||0)+n; d.done=(d.done||0)+1;
+      localStorage.setItem('smquiz', JSON.stringify(d));
+      localStorage.setItem(stamp,'1');
+    }catch(_){}
+  }
+  function ready(fn){ if(document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded',fn); }
+  ready(function(){
+    var tag = /listening-quiz/.test(p) ? 'lq' : (/stories/.test(p) ? 'st' : 'pr');
+    var fired=false;
+    function trigger(xp){ if(!fired){ fired=true; markActive(); } bankXP(xp, tag); }
+    // Pronounce: first record press
+    var rec=document.getElementById('rec'); if(rec) rec.addEventListener('click', function(){ trigger(5); }, {once:false});
+    // Stories: any Next / toggle interaction
+    var nx=document.getElementById('next'); if(nx) nx.addEventListener('click', function(){ trigger(5); });
+    var en=document.getElementById('enToggle'); if(en) en.addEventListener('change', function(){ trigger(5); });
+    // Listening quiz: award on a correct answer (delegated; quiz adds .correct class)
+    document.addEventListener('click', function(e){
+      if(/listening-quiz/.test(p) && e.target && e.target.classList && e.target.classList.contains('opt')){
+        setTimeout(function(){ if(e.target.classList.contains('correct')) trigger(10); else { markActive(); } }, 50);
+      }
+    }, true);
+  });
+})();
