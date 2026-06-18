@@ -1,0 +1,50 @@
+Deck,Tag,Malayalam,Manglish,English,AudioFile,Notes
+Adult Starter,Greetings,നമസ്കാരം,Namaskaaram,Hello / greetings,adult_D01_greetings_slow_normal_repeat.mp3,Neutral respectful greeting
+Adult Starter,Greetings,സുഖമാണോ?,Sukhamaano?,How are you?,adult_D01_greetings_slow_normal_repeat.mp3,Polite question
+Adult Starter,Greetings,എനിക്ക് സുഖമാണ്,Enikku sukham aanu,I am fine,adult_D01_greetings_slow_normal_repeat.mp3,Also written sukhamaanu
+Adult Starter,Greetings,വീണ്ടും കാണാം,Veendum kaanaam,See you again,adult_D01_greetings_slow_normal_repeat.mp3,Useful closing
+Adult Starter,Repair,ഒന്നുകൂടി പറയാമോ?,Onnukoode parayaamo?,Can you say it again?,adult_D02_family_call_slow_normal_repeat.mp3,Essential repair phrase
+Adult Starter,Repair,പതുക്കെ പറയാമോ?,Pathukke parayaamo?,Can you speak slowly?,adult_D02_family_call_slow_normal_repeat.mp3,Essential repair phrase
+Adult Starter,Repair,എനിക്ക് മനസ്സിലായില്ല,Enikku manassilaayilla,I did not understand,adult_R01_prompt_response_wants_needs.mp3,Use when listening fails
+Adult Starter,Repair,മലയാളത്തിൽ എങ്ങനെ പറയും?,Malayalathil engane parayum?,How do you say it in Malayalam?,adult_R01_prompt_response_wants_needs.mp3,Learning phrase
+Adult Starter,Pronouns,ഞാൻ,Njaan,I,,Subject pronoun
+Adult Starter,Pronouns,നീ,Nee,You informal,,Use only with close people
+Adult Starter,Pronouns,നിങ്ങൾ,Ningal,You polite,,Use with elders/strangers
+Adult Starter,Pronouns,അവൻ,Avan,He informal,,Use carefully
+Adult Starter,Pronouns,അവൾ,Aval,She informal,,Use carefully
+Adult Starter,Pronouns,അവർ,Avar,They / respectful he or she,,Respectful form
+Adult Starter,Wants,എനിക്ക് ചായ വേണം,Enikku chaaya venam,I want tea,adult_R01_prompt_response_wants_needs.mp3,Dative want pattern
+Adult Starter,Wants,എനിക്ക് വെള്ളം വേണം,Enikku vellam venam,I want water,adult_R01_prompt_response_wants_needs.mp3,Survival phrase
+Adult Starter,Wants,എനിക്ക് ചോറ് വേണ്ട,Enikku choru venda,I do not want rice,adult_R01_prompt_response_wants_needs.mp3,Venda = do not want
+Adult Starter,Wants,എനിക്ക് മലയാളം അറിയാം,Enikku Malayalam ariyaam,I know Malayalam,adult_R01_prompt_response_wants_needs.mp3,Knowledge pattern
+Adult Starter,Wants,എനിക്ക് കുറച്ച് മലയാളം അറിയാം,Enikku kurachu Malayalam ariyaam,I know a little Malayalam,adult_R01_prompt_response_wants_needs.mp3,Good beginner line
+Adult Starter,Family,അമ്മ,Amma,Mother,kids_K03_family_food_colours_animals.mp3,Family word
+Adult Starter,Family,അച്ഛൻ,Achan,Father,kids_K03_family_food_colours_animals.mp3,Family word
+Adult Starter,Family,ചേട്ടൻ,Chettan,Elder brother / older male address,,Respectful familiar address
+Adult Starter,Family,ചേച്ചി,Chechi,Elder sister / older female address,,Respectful familiar address
+Adult Starter,Family,കുട്ടി,Kutti,Child,,Common noun
+Adult Starter,Food,ചായ,Chaaya,Tea,adult_D03_tea_shop_slow_normal_repeat.mp3,Very common
+Adult Starter,Food,കാപ്പി,Kaapi,Coffee,adult_D03_tea_shop_slow_normal_repeat.mp3,Common
+Adult Starter,Food,ചോറ്,Choru,Rice / meal,adult_D03_tea_shop_slow_normal_repeat.mp3,Kerala food word
+Adult Starter,Food,പുട്ട്,Puttu,Puttu,adult_D03_tea_shop_slow_normal_repeat.mp3,Kerala food
+Adult Starter,Food,കറി,Kari,Curry / side dish,adult_D03_tea_shop_slow_normal_repeat.mp3,Everyday food word
+Adult Starter,Shopping,എത്ര രൂപയായി?,Ethra rupayaayi?,How many rupees is it?,adult_D03_tea_shop_slow_normal_repeat.mp3,Price question
+Adult Starter,Shopping,ബിൽ തരാമോ?,Bill tharaamo?,Can you give the bill?,adult_D03_tea_shop_slow_normal_repeat.mp3,Restaurant/shop
+Adult Starter,Shopping,ഇതിന്റെ വില എന്താണ്?,Ithinte vila enthaanu?,What is the price of this?,,Useful shopping line
+Adult Starter,Directions,എവിടെ?,Evide?,Where?,adult_D04_auto_directions_slow_normal_repeat.mp3,Question word
+Adult Starter,Directions,ഇവിടെ നിർത്തൂ,Ivide nirthoo,Stop here,adult_D04_auto_directions_slow_normal_repeat.mp3,Auto/taxi
+Adult Starter,Directions,ഇടത്തോട്ട് തിരിയൂ,Idathottu thiriyoo,Turn left,adult_D04_auto_directions_slow_normal_repeat.mp3,Direction
+Adult Starter,Directions,വലത്തോട്ട് തിരിയൂ,Valathottu thiriyoo,Turn right,adult_D04_auto_directions_slow_normal_repeat.mp3,Direction
+Adult Starter,Directions,നേരെ പോകൂ,Neere pokoo,Go straight,adult_D04_auto_directions_slow_normal_repeat.mp3,Direction
+Adult Starter,Health,എനിക്ക് സുഖമില്ല,Enikku sukhamilla,I am not well,adult_D05_health_slow_normal_repeat.mp3,Health phrase
+Adult Starter,Health,എനിക്ക് തലവേദന ഉണ്ട്,Enikku thalavedana undu,I have a headache,adult_D05_health_slow_normal_repeat.mp3,Health phrase
+Adult Starter,Health,എനിക്ക് പനി ഉണ്ട്,Enikku pani undu,I have a fever,adult_D05_health_slow_normal_repeat.mp3,Health phrase
+Adult Starter,Health,ഡോക്ടറെ കാണണം,Doctor-e kaananam,Need to see a doctor,adult_D05_health_slow_normal_repeat.mp3,Health phrase
+Adult Starter,Politeness,ദയവായി,Dayavaayi,Please,,Formal written/polite
+Adult Starter,Politeness,ക്ഷമിക്കണം,Kshamikkanam,Sorry / excuse me,,Polite apology
+Adult Starter,Politeness,നന്ദി,Nandi,Thank you,,Use in neutral/polite contexts
+Adult Starter,Core Verbs,വരൂ,Varoo,Come,,Gentle command
+Adult Starter,Core Verbs,പോകൂ,Pokoo,Go,,Gentle command
+Adult Starter,Core Verbs,ഇരിക്കൂ,Irikkoo,Sit,,Gentle command
+Adult Starter,Core Verbs,കഴിക്കൂ,Kazhikkoo,Eat,,Gentle command
+Adult Starter,Core Verbs,കേൾക്കൂ,Kelkkoo,Listen,,Gentle command

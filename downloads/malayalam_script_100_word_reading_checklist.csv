@@ -1,0 +1,101 @@
+Number,MalayalamWord,ManglishHint,Meaning,SkillFocus,Status
+1,അമ്മ,amma,mother,simple word,Not started
+2,അച്ഛൻ,achan,father,chillu,Not started
+3,വീട്,veedu,house,long vowel,Not started
+4,നാട്,naadu,place/native land,long vowel,Not started
+5,വെള്ളം,vellam,water,consonant doubling,Not started
+6,അരി,ari,rice,simple vowel,Not started
+7,ചായ,chaaya,tea,long vowel,Not started
+8,പാൽ,paal,milk,chillu,Not started
+9,പൂവ്,poovu,flower,long vowel,Not started
+10,മരം,maram,tree,simple word,Not started
+11,മഴ,mazha,rain,zha sound,Not started
+12,പുഴ,puzha,river,zha sound,Not started
+13,കുട്ടി,kutti,child,consonant doubling,Not started
+14,പട്ടി,patti,dog,consonant doubling,Not started
+15,പൂച്ച,poocha,cat,ch sound,Not started
+16,പശു,pashu,cow,sha sound,Not started
+17,കാക്ക,kaakka,crow,long consonant,Not started
+18,മീൻ,meen,fish,chillu,Not started
+19,കൈ,kai,hand,diphthong,Not started
+20,കാൽ,kaal,leg/chair leg,chillu,Not started
+21,കണ്ണ്,kannu,eye,conjunct/chillu-like ending,Not started
+22,മൂക്ക്,mookku,nose,long vowel,Not started
+23,വായ്,vaay,mouth,diphthong,Not started
+24,ചെവി,chevi,ear,simple word,Not started
+25,തല,thala,head,dental sound,Not started
+26,പേര്,peru,name,vowel sign,Not started
+27,വയസ്,vayasu,age,simple word,Not started
+28,സ്കൂൾ,school,school,loanword/conjunct,Not started
+29,പുസ്തകം,pusthakam,book,cluster,Not started
+30,പേന,pena,pen,long vowel,Not started
+31,ക്ലാസ്,class,class,loanword/cluster,Not started
+32,അധ്യാപകൻ,adhyaapakan,teacher,complex cluster,Not started
+33,സുഹൃത്ത്,suhruthu,friend,complex cluster,Not started
+34,കളി,kali,play/game,simple word,Not started
+35,പാട്ട്,paattu,song,long vowel,Not started
+36,നൃത്തം,nritham,dance,cluster,Not started
+37,കഥ,kadha,story,voiced sound,Not started
+38,ചിരി,chiri,laugh,simple word,Not started
+39,സന്തോഷം,santhosham,happiness,cluster,Not started
+40,ദുഃഖം,dukham,sadness,visarga/cluster,Not started
+41,ഇന്ന്,innu,today,consonant doubling,Not started
+42,നാളെ,naale,tomorrow,long vowel,Not started
+43,ഇന്നലെ,innale,yesterday,consonant doubling,Not started
+44,ഇപ്പോൾ,ippol,now,chillu,Not started
+45,ഇവിടെ,ivide,here,simple word,Not started
+46,അവിടെ,avide,there,simple word,Not started
+47,എവിടെ,evide,where,question word,Not started
+48,എന്ത്,enthu,what,question word,Not started
+49,ആര്,aaru,who,long vowel,Not started
+50,എപ്പോൾ,eppol,when,chillu,Not started
+51,എത്ര,ethra,how much,cluster,Not started
+52,എങ്ങനെ,engane,how,simple word,Not started
+53,വരൂ,varoo,come,polite form,Not started
+54,പോകൂ,pokoo,go,polite form,Not started
+55,ഇരിക്കൂ,irikku,sit,consonant doubling,Not started
+56,കഴിക്കൂ,kazhikku,eat,zha sound,Not started
+57,കുടിക്കൂ,kudikku,drink,consonant doubling,Not started
+58,വേണം,venam,want/need,long vowel,Not started
+59,വേണ്ട,venda,do not want,retroflex/dental contrast,Not started
+60,ഉണ്ട്,undu,there is/have,retroflex,Not started
+61,ഇല്ല,illa,no/not,consonant doubling,Not started
+62,ശരി,shari,okay,sha sound,Not started
+63,നന്ദി,nandi,thanks,dental/retroflex awareness,Not started
+64,സഹായം,sahaayam,help,long vowel,Not started
+65,ക്ഷമിക്കണം,kshamikkanam,sorry/excuse me,complex cluster,Not started
+66,മനസ്സിലായില്ല,manassilaayilla,did not understand,long word,Not started
+67,വീണ്ടും,veendum,again,long vowel,Not started
+68,പറയൂ,parayoo,say/tell,polite form,Not started
+69,കേൾക്കൂ,kelkkoo,listen,conjunct,Not started
+70,നോക്കൂ,nokkoo,look,consonant doubling,Not started
+71,നല്ല,nalla,good,consonant doubling,Not started
+72,ചീത്ത,cheetha,bad,long vowel,Not started
+73,വലിയ,valiya,big,simple word,Not started
+74,ചെറിയ,cheriya,small,simple word,Not started
+75,പുതിയ,puthiya,new,aspirated sound,Not started
+76,പഴയ,pazhaya,old,zha sound,Not started
+77,ചൂട്,choodu,hot,long vowel,Not started
+78,തണുപ്പ്,thanuppu,cold,consonant doubling,Not started
+79,വേഗം,vegam,fast,long vowel,Not started
+80,മെല്ലെ,melle,slowly,consonant doubling,Not started
+81,ഒന്ന്,onnu,one,number,Not started
+82,രണ്ട്,rantu,two,number/retroflex,Not started
+83,മൂന്ന്,moonnu,three,number,Not started
+84,നാല്,naalu,four,number/chillu,Not started
+85,അഞ്ച്,anchu,five,number/conjunct,Not started
+86,ആറ്,aaru,six,number,Not started
+87,ഏഴ്,ezhu,seven,zha sound,Not started
+88,എട്ട്,ettu,eight,consonant doubling,Not started
+89,ഒമ്പത്,onpathu,nine,cluster,Not started
+90,പത്ത്,pathu,ten,number,Not started
+91,പണം,panam,money,simple word,Not started
+92,കട,kada,shop,simple word,Not started
+93,വില,vila,price,simple word,Not started
+94,ബസ്,bus,bus,loanword,Not started
+95,ട്രെയിൻ,train,train,loanword/cluster,Not started
+96,ഡോക്ടർ,doctor,doctor,loanword/chillu,Not started
+97,മരുന്ന്,marunnu,medicine,consonant doubling,Not started
+98,ആശുപത്രി,aashupathri,hospital,long word,Not started
+99,കേരളം,keralam,Kerala,place name,Not started
+100,മലയാളം,malayalam,Malayalam,zha sound,Not started

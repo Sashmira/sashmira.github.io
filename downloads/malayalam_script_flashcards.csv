@@ -1,0 +1,64 @@
+Deck,Tag,Malayalam,Manglish,English,AudioFile,Notes
+Script,Vowels,അ,a,short a,script_S01_vowels.mp3,Vowel
+Script,Vowels,ആ,aa,long aa,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഇ,i,short i,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഈ,ee,long ee,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഉ,u,short u,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഊ,oo,long oo,script_S01_vowels.mp3,Vowel
+Script,Vowels,എ,e,short e,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഏ,E,long e,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഒ,o,short o,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഓ,O,long o,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഐ,ai,ai,script_S01_vowels.mp3,Vowel
+Script,Vowels,ഔ,au,au,script_S01_vowels.mp3,Vowel
+Script,Ka Row,ക,ka,ka,script_S02_consonant_rows.mp3,Consonant
+Script,Ka Row,ഖ,kha,kha,script_S02_consonant_rows.mp3,Consonant
+Script,Ka Row,ഗ,ga,ga,script_S02_consonant_rows.mp3,Consonant
+Script,Ka Row,ഘ,gha,gha,script_S02_consonant_rows.mp3,Consonant
+Script,Ka Row,ങ,nga,nga,script_S02_consonant_rows.mp3,Consonant
+Script,Cha Row,ച,cha,cha,script_S02_consonant_rows.mp3,Consonant
+Script,Cha Row,ഛ,chha,chha,script_S02_consonant_rows.mp3,Consonant
+Script,Cha Row,ജ,ja,ja,script_S02_consonant_rows.mp3,Consonant
+Script,Cha Row,ഝ,jha,jha,script_S02_consonant_rows.mp3,Consonant
+Script,Cha Row,ഞ,nja,nja,script_S02_consonant_rows.mp3,Consonant
+Script,Retroflex Row,ട,Ta,retroflex ta,script_S02_consonant_rows.mp3,Consonant
+Script,Retroflex Row,ഠ,Tha,retroflex tha,script_S02_consonant_rows.mp3,Consonant
+Script,Retroflex Row,ഡ,Da,retroflex da,script_S02_consonant_rows.mp3,Consonant
+Script,Retroflex Row,ഢ,Dha,retroflex dha,script_S02_consonant_rows.mp3,Consonant
+Script,Retroflex Row,ണ,Na,retroflex na,script_S02_consonant_rows.mp3,Consonant
+Script,Dental Row,ത,tha,dental tha,script_S02_consonant_rows.mp3,Consonant
+Script,Dental Row,ഥ,thha,dental thha,script_S02_consonant_rows.mp3,Consonant
+Script,Dental Row,ദ,da,dental da,script_S02_consonant_rows.mp3,Consonant
+Script,Dental Row,ധ,dha,dental dha,script_S02_consonant_rows.mp3,Consonant
+Script,Dental Row,ന,na,dental na,script_S02_consonant_rows.mp3,Consonant
+Script,Pa Row,പ,pa,pa,script_S02_consonant_rows.mp3,Consonant
+Script,Pa Row,ഫ,pha,pha/fa,script_S02_consonant_rows.mp3,Consonant
+Script,Pa Row,ബ,ba,ba,script_S02_consonant_rows.mp3,Consonant
+Script,Pa Row,ഭ,bha,bha,script_S02_consonant_rows.mp3,Consonant
+Script,Pa Row,മ,ma,ma,script_S02_consonant_rows.mp3,Consonant
+Script,Other,യ,ya,ya,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ര,ra,soft/tapped ra,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ല,la,la,script_S02_consonant_rows.mp3,Consonant
+Script,Other,വ,va,va/wa,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ശ,sha,sha,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ഷ,Sha,retroflex sha,script_S02_consonant_rows.mp3,Consonant
+Script,Other,സ,sa,sa,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ഹ,ha,ha,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ള,La,retroflex la,script_S02_consonant_rows.mp3,Consonant
+Script,Other,ഴ,zha,zha,script_S02_consonant_rows.mp3,Consonant
+Script,Other,റ,Rra,strong ra,script_S02_consonant_rows.mp3,Consonant
+Script,Chillu,ൻ,n,final n,script_S03_chillu_conjuncts.mp3,Chillu
+Script,Chillu,ർ,r,final r,script_S03_chillu_conjuncts.mp3,Chillu
+Script,Chillu,ൽ,l,final l,script_S03_chillu_conjuncts.mp3,Chillu
+Script,Chillu,ൾ,L,final retroflex l,script_S03_chillu_conjuncts.mp3,Chillu
+Script,Chillu,ൺ,N,final retroflex n,script_S03_chillu_conjuncts.mp3,Chillu
+Script,Conjuncts,ക്ക,kka,kka,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ങ്ങ,nga,nga,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ച്ച,ccha,ccha,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ഞ്ഞ,njnja,njnja,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ട്ട,Tta,Tta,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ണ്ട,Nda,Nda,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ത്ത,ttha,ttha,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ന്ന,nna,nna,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,മ്മ,mma,mma,script_S03_chillu_conjuncts.mp3,Common conjunct
+Script,Conjuncts,ക്ഷ,ksha,ksha,script_S03_chillu_conjuncts.mp3,Common conjunct

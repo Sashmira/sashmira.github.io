@@ -1,0 +1,15 @@
+Step,Owner,Goal,Status
+Assign ISBNs,Reshmi,Make print books retail-ready,Pending
+Final KDP cover/title check,Reshmi,Match cover and metadata exactly,Pending
+Upload adult book,Reshmi,Create adult book retail page,Pending
+Upload kids books,Reshmi,Create kids retail pages,Pending
+Upload script book,Reshmi,Create script book retail page,Pending
+Recruit advance readers,Reshmi,Seed honest feedback,Pending
+Send review compliance note,Reshmi,Avoid incentivized review risk,Pending
+Send media kit,Reshmi,Get diaspora coverage,Pending
+Send school/library pack,Reshmi,Open institutional adoption path,Pending
+Post 45-day short video calendar,Reshmi,Build social awareness,Pending
+Publish companion pages,Codex,Make QR/download support live,Blocked by GitHub Pages
+Add retailer links,Codex,Connect launch pages to buy buttons,Pending after KDP live
+Run post-publish URL checks,Codex,Confirm launch pages are live,Pending after deploy
+

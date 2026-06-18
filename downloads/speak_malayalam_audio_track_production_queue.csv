@@ -1,0 +1,23 @@
+TrackId,Book,Section,TrackTitle,TrackType,Speed,Filename,Priority,RecordingStatus
+SM-AUD-001,Adult,Pronunciation,Pronunciation overview,Pronunciation model,Slow,sm_audio_001_pronunciation_overview_slow.mp3,P0,Not recorded
+SM-AUD-002,Adult,Pronunciation,Pronunciation overview,Pronunciation model,Natural,sm_audio_002_pronunciation_overview_natural.mp3,P0,Not recorded
+SM-AUD-003,Adult,Pronunciation,Dental vs retroflex drill,Listen and repeat,Slow,sm_audio_003_dental_retroflex_drill_slow.mp3,P0,Not recorded
+SM-AUD-004,Adult,Pronunciation,Long and short vowel drill,Listen and repeat,Slow,sm_audio_004_long_short_vowel_drill_slow.mp3,P0,Not recorded
+SM-AUD-005,Adult,Dialogue,Greetings and introduction,Dialogue,Slow,sm_audio_005_greetings_dialogue_slow.mp3,P0,Not recorded
+SM-AUD-006,Adult,Dialogue,Greetings and introduction,Dialogue,Natural,sm_audio_006_greetings_dialogue_natural.mp3,P0,Not recorded
+SM-AUD-007,Adult,Dialogue,Family conversation,Dialogue,Slow,sm_audio_007_family_dialogue_slow.mp3,P0,Not recorded
+SM-AUD-008,Adult,Dialogue,Food and restaurant,Dialogue,Slow,sm_audio_008_food_dialogue_slow.mp3,P0,Not recorded
+SM-AUD-009,Adult,Dialogue,Directions and places,Dialogue,Slow,sm_audio_009_directions_dialogue_slow.mp3,P0,Not recorded
+SM-AUD-010,Adult,Review,30-day review drill,Prompt-response,Natural,sm_audio_010_30_day_review_prompt_response.mp3,P0,Not recorded
+SM-AUD-011,Kids 3-6,Words,Greetings for little learners,Kids read-aloud,Slow,sm_audio_011_kids36_greetings.mp3,P0,Not recorded
+SM-AUD-012,Kids 3-6,Words,Family words,Kids read-aloud,Slow,sm_audio_012_kids36_family_words.mp3,P0,Not recorded
+SM-AUD-013,Kids 3-6,Words,Animals and sounds,Kids read-aloud,Slow,sm_audio_013_kids36_animals.mp3,P1,Not recorded
+SM-AUD-014,Kids 6-9,Dialogue,Introduce yourself,Kids dialogue,Slow,sm_audio_014_kids69_introduce_yourself.mp3,P0,Not recorded
+SM-AUD-015,Kids 6-9,Dialogue,Food roleplay,Kids dialogue,Slow,sm_audio_015_kids69_food_roleplay.mp3,P1,Not recorded
+SM-AUD-016,Kids 9-13,Dialogue,Family call,Teen dialogue,Natural,sm_audio_016_kids913_family_call.mp3,P0,Not recorded
+SM-AUD-017,Kids 9-13,Story,Three-line story model,Teen reading,Natural,sm_audio_017_kids913_three_line_story.mp3,P1,Not recorded
+SM-AUD-018,Script,Letters,Vowels,Script model,Slow,sm_audio_018_script_vowels.mp3,P0,Not recorded
+SM-AUD-019,Script,Letters,Consonants,Script model,Slow,sm_audio_019_script_consonants.mp3,P0,Not recorded
+SM-AUD-020,Script,Letters,Chillu letters,Script model,Slow,sm_audio_020_script_chillu.mp3,P0,Not recorded
+SM-AUD-021,Script,Reading,100-word checkpoint 1 to 25,Script reading,Slow,sm_audio_021_script_100_words_001_025.mp3,P1,Not recorded
+SM-AUD-022,Script,Dictation,Dictation set 1,Dictation,Slow,sm_audio_022_script_dictation_set_1.mp3,P1,Not recorded
