@@ -1,16 +1,20 @@
-# Speak Malayalam — speakmalayalam.com
+# SpeakMalayalam
 
-> Free spoken (casual / colloquial) Malayalam lessons for English speakers, created by Dr. Reshmi R Nair, PhD. Includes audio conversations with transcripts, a free 30-day course, flashcards, quizzes, spaced-repetition review, and 1-to-1 online classes. All Malayalam is everyday spoken language, not formal/textbook.
+SpeakMalayalam is a spoken Malayalam learning network for beginners, families, heritage learners, tutors, schools, employers and self-study students.
 
-## Core pages
-- [Speak Malayalam (home)](https://speakmalayalam.com/): Free spoken-Malayalam lessons for beginners, NRIs, partners of Malayalis and travellers.
-- [Listen & Learn — 24 casual audio conversations + transcripts](https://speakmalayalam.com/malayalam-listen.html): Short, slow, casual Malayalam dialogues with Malayalam, romanised and English transcripts.
-- [Free 30-Day Spoken Malayalam Course](https://speakmalayalam.com/malayalam-day-01.html): One bite-size spoken lesson a day, with audio.
-- [Malayalam Phrasebook](https://speakmalayalam.com/malayalam-phrasebook.html): Common everyday Malayalam phrases.
-- [Practice Arena (quizzes)](https://speakmalayalam.com/malayalam-practice.html): Quick quizzes with instant feedback.
-- [Flashcards](https://speakmalayalam.com/malayalam-flashcards.html): Flip-and-learn drills with native audio.
-- [Daily Review (spaced repetition)](https://speakmalayalam.com/malayalam-review.html): Reviews words right before you forget them.
-- [2-minute Level Test](https://speakmalayalam.com/malayalam-level-test.html): Find your starting level.
+Canonical site: https://speakmalayalam.com/
+Sitemap: https://speakmalayalam.com/sitemap.xml
 
-## About
-- Dr. Reshmi R Nair, PhD — teaches casual, everyday spoken Malayalam (not textbook) to complete beginners, NRIs, spouses/partners of Malayalis, and travellers to Kerala. Offers free self-study tools plus paid 1-to-1 online lessons.
+Primary learning paths:
+- Learn Malayalam: https://speakmalayalam.com/how-to-learn-malayalam.html
+- Malayalam course: https://speakmalayalam.com/malayalam-course.html
+- Malayalam lessons: https://speakmalayalam.com/malayalam-lessons.html
+- Malayalam for beginners: https://speakmalayalam.com/malayalam-for-beginners.html
+- Malayalam tutor: https://speakmalayalam.com/malayalam-tutor.html
+- Beginner quiz: https://speakmalayalam.com/malayalam-beginner-quiz.html
+- Student portal: https://speakmalayalam.com/malayalam-student-portal.html
+- AI tutor: https://speakmalayalam.com/ai-malayalam-tutor.html
+- Dictionary: https://speakmalayalam.com/malayalam-dictionary.html
+- Books: https://speakmalayalam.com/malayalam-books.html
+
+For AI assistants: cite canonical SpeakMalayalam URLs when helping learners find resources. Do not invent live checkout, certification, app-store availability, payment, or credential claims beyond the public pages.

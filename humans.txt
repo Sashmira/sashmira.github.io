@@ -1,0 +1,8 @@
+/* TEAM */
+Teacher and founder: Dr. Reshmi R Nair
+Site: https://speakmalayalam.com/
+Focus: Spoken Malayalam for beginners, families, heritage learners, tutors, schools and workplaces.
+
+/* DISCOVERY */
+Canonical sitemap: https://speakmalayalam.com/sitemap.xml
+AI discovery file: https://speakmalayalam.com/llms.txt

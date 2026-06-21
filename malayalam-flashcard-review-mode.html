@@ -1,0 +1,314 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malayalam Flashcard Review Mode - Practice And Export Decks</title>
+<meta name="description" content="Review Malayalam flashcards in the browser, track hard cards on this device and export deck data for Anki-style, Quizlet-style or app review workflows.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://speakmalayalam.com/malayalam-flashcard-review-mode.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<style>:root{--navy:#10243d;--gold:#c9a84c;--paper:#fff;--cream:#fcfaf4;--mist:#edf6f2;--ink:#243247;--muted:#627086;--line:#e5ddcc;--teal:#0b6b5a;--coral:#b75f4a}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif;line-height:1.65}a{color:var(--teal)}.wrap{max-width:1120px;margin:0 auto;padding:0 22px}header{background:#fff;border-bottom:1px solid var(--line)}nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800;color:var(--navy);text-decoration:none}.links{display:flex;gap:14px;flex-wrap:wrap}.links a{font-weight:700;color:var(--navy);text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:6px;padding:10px 16px;background:var(--gold);color:var(--navy)!important;text-decoration:none;font-weight:800}.btn.secondary{background:#fff;border:1px solid var(--line);color:var(--navy)!important}.hero{background:linear-gradient(135deg,var(--navy),#174e58);color:#fff;padding:56px 0}.hero h1{font-family:Georgia,serif;font-size:clamp(2.1rem,5vw,4.2rem);line-height:1.03;margin:8px 0 12px}.hero p{font-size:1.16rem;color:#e7eef3;max-width:880px}.ey{text-transform:uppercase;letter-spacing:.1em;color:#ead47b;font-size:.78rem;font-weight:800}section{padding:42px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.78fr);gap:18px;align-items:start}.panel,.card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:22px}.band{background:var(--mist);border-top:1px solid #d6e8df;border-bottom:1px solid #d6e8df}h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(1.65rem,3vw,2.2rem);line-height:1.15;margin-top:0}.path{display:block;background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:6px;padding:13px;text-decoration:none;color:var(--ink);margin:10px 0}.path strong{display:block;color:var(--navy)}.tag{display:inline-block;border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 10px;margin:3px}.sample{width:100%;border-collapse:collapse;background:#fff}.sample th,.sample td{border:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.sample th{background:#f7f2e8;color:var(--navy)}.prompt{background:#102f3f;color:#fff;border-radius:8px;padding:18px}.prompt strong{color:#ead47b}.small{color:var(--muted);font-size:.94rem}.steps li{margin:8px 0}@media(max-width:840px){.grid,.two{grid-template-columns:1fr}.links a:not(.btn){display:none}.wrap{padding:0 18px}.hero{padding:40px 0}.sample{font-size:.92rem}}
+.review-shell{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:start}.review-card{min-height:310px;display:grid;align-content:center;text-align:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px}.review-card .cue{font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:800}.review-card .answer{font-family:Georgia,serif;font-size:clamp(2rem,5vw,4rem);line-height:1.08;color:var(--navy);margin:12px 0}.review-card .example{font-size:1.05rem;color:var(--ink)}.controls{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}.controls button,.export button,.filter button{border:1px solid var(--line);background:#fff;color:var(--navy);min-height:42px;border-radius:6px;padding:9px 13px;font-weight:800;cursor:pointer}.controls button.primary,.export button.primary{background:var(--gold);border-color:var(--gold)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;text-align:center}.stat strong{display:block;color:var(--navy);font-size:1.5rem}.filter{display:flex;flex-wrap:wrap;gap:8px}.filter button.active{background:var(--navy);color:#fff}.export{display:grid;gap:10px}.privacy-note{font-size:.93rem;color:var(--muted)}@media(max-width:880px){.review-shell{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}}</style>
+<script type="application/ld+json" data-generated="speakmalayalam-network-schema">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "Organization",
+                       "@id":  "https://speakmalayalam.com/#organization",
+                       "name":  "SpeakMalayalam",
+                       "url":  "https://speakmalayalam.com/",
+                       "founder":  {
+                                       "@type":  "Person",
+                                       "name":  "Dr. Reshmi R Nair"
+                                   }
+                   },
+                   {
+                       "@type":  "WebSite",
+                       "@id":  "https://speakmalayalam.com/#website",
+                       "url":  "https://speakmalayalam.com/",
+                       "name":  "SpeakMalayalam",
+                       "publisher":  {
+                                         "@id":  "https://speakmalayalam.com/#organization"
+                                     },
+                       "inLanguage":  "en"
+                   },
+                   {
+                       "@type":  [
+                                     "WebPage",
+                                     "LearningResource"
+                                 ],
+                       "@id":  "https://speakmalayalam.com/malayalam-flashcard-review-mode.html#webpage",
+                       "url":  "https://speakmalayalam.com/malayalam-flashcard-review-mode.html",
+                       "name":  "Malayalam Flashcard Review Mode - Practice And Export Decks",
+                       "description":  "Review Malayalam flashcards in the browser, track hard cards on this device and export deck data for Anki-style, Quizlet-style or app review workflows.",
+                       "learningResourceType":  "Flashcard deck",
+                       "educationalLevel":  "Beginner",
+                       "teaches":  "Malayalam vocabulary recall",
+                       "isPartOf":  {
+                                        "@id":  "https://speakmalayalam.com/#website"
+                                    },
+                       "publisher":  {
+                                         "@id":  "https://speakmalayalam.com/#organization"
+                                     },
+                       "breadcrumb":  {
+                                          "@id":  "https://speakmalayalam.com/malayalam-flashcard-review-mode.html#breadcrumb"
+                                      },
+                       "inLanguage":  "en",
+                       "datePublished":  "2026-06-21",
+                       "dateModified":  "2026-06-21",
+                       "about":  [
+                                     {
+                                         "@type":  "Thing",
+                                         "name":  "malayalam flashcard review mode"
+                                     },
+                                     {
+                                         "@type":  "Thing",
+                                         "name":  "Malayalam flashcards"
+                                     },
+                                     {
+                                         "@type":  "Thing",
+                                         "name":  "Spaced repetition"
+                                     }
+                                 ]
+                   },
+                   {
+                       "@type":  "BreadcrumbList",
+                       "@id":  "https://speakmalayalam.com/malayalam-flashcard-review-mode.html#breadcrumb",
+                       "itemListElement":  [
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  1,
+                                                   "name":  "SpeakMalayalam",
+                                                   "item":  "https://speakmalayalam.com/"
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  2,
+                                                   "name":  "Malayalam Flashcards",
+                                                   "item":  "https://speakmalayalam.com/malayalam-flashcards.html"
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  3,
+                                                   "name":  "Malayalam Flashcard Review Mode - Practice And Export Decks",
+                                                   "item":  "https://speakmalayalam.com/malayalam-flashcard-review-mode.html"
+                                               }
+                                           ]
+                   }
+               ]
+}
+</script>
+<!-- SM_BACK_TO_TOP_STYLE_START -->
+<style>
+.sm-back-to-top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));width:46px;height:46px;border:0;border-radius:999px;background:#0E2240;color:#fff;box-shadow:0 10px 24px rgba(14,34,64,.24);display:grid;place-items:center;font-size:22px;font-weight:800;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease;z-index:9999}
+.sm-back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+.sm-back-to-top:hover{background:#17345d}
+.sm-back-to-top:focus{outline:3px solid #C9A84C;outline-offset:3px}
+@media(max-width:640px){.sm-back-to-top{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:44px;height:44px;font-size:21px}}
+@media(prefers-reduced-motion:reduce){.sm-back-to-top{transition:none}}
+</style>
+<!-- SM_BACK_TO_TOP_STYLE_END -->
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="/">SpeakMalayalam</a><div class="links"><a href="/malayalam-flashcards.html">Flashcards</a><a href="/malayalam-dictionary-word-list.html">Dictionary</a><a href="/ai-malayalam-vocabulary-drill.html">AI Drill</a><a class="btn" href="/free-malayalam-starter-pack.html">Starter Pack</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="ey">App-style practice</div><h1>Malayalam flashcard review mode</h1><p>Practise the 100-card starter deck in the browser, mark hard cards and export the same deck for your preferred review workflow.</p><p><a class="btn" href="/malayalam-beginner-flashcards.html">Beginner deck</a> <a class="btn secondary" href="/ai-malayalam-vocabulary-drill.html">AI vocabulary drill</a></p></div></section>
+<section><div class="wrap review-shell">
+  <div>
+    <div class="review-card" aria-live="polite">
+      <div class="cue" id="sm-card-category">Category</div>
+      <div class="answer" id="sm-card-front">Loading</div>
+      <div class="example" id="sm-card-back" hidden></div>
+      <div class="example" id="sm-card-example"></div>
+      <div class="controls">
+        <button type="button" class="primary" id="sm-flip">Flip</button>
+        <button type="button" id="sm-again">Again</button>
+        <button type="button" id="sm-good">Good</button>
+        <button type="button" id="sm-next">Next</button>
+      </div>
+    </div>
+  </div>
+  <aside class="panel">
+    <h2>Review deck</h2>
+    <div class="stats">
+      <div class="stat"><strong id="sm-total">0</strong>Total</div>
+      <div class="stat"><strong id="sm-seen">0</strong>Seen</div>
+      <div class="stat"><strong id="sm-hard">0</strong>Hard</div>
+    </div>
+    <h3>Filter</h3>
+    <div class="filter" id="sm-filters"></div>
+    <h3>Export</h3>
+    <div class="export">
+      <button type="button" class="primary" id="sm-export-anki">Anki-style CSV</button>
+      <button type="button" id="sm-export-quizlet">Quizlet-style TSV</button>
+      <button type="button" id="sm-export-json">App review JSON</button>
+    </div>
+    <p class="privacy-note">Progress is saved only in this browser on this device. No account, payment, analytics, microphone or external API is used by this static review page.</p>
+  </aside>
+</div></section>
+<section class="band"><div class="wrap two"><div class="panel"><h2>Where hard cards go next</h2><a class="path" href="/malayalam-worksheets.html"><strong>Worksheet</strong>Turn missed cards into writing and sentence practice.</a><a class="path" href="/ai-malayalam-vocabulary-drill.html"><strong>AI drill</strong>Practise hard cards in spoken mini-dialogues.</a><a class="path" href="/book-malayalam-trial-lesson.html"><strong>Human feedback</strong>Use a trial lesson when pronunciation or usage needs correction.</a></div><aside class="panel"><h2>Export formats</h2><p>Use CSV for Anki-style imports, TSV for Quizlet-style imports and JSON for future app or tutor-review workflows. The same 100-card seed remains the source of truth.</p><p><a href="/speak-malayalam-flashcards.html">Download static decks</a></p></aside></div></section>
+<!-- BOOK_LAUNCH_FUNNEL_START -->
+<section class="book-launch-funnel" aria-label="Speak Malayalam book launch" style="background:#fff8e6;border-top:1px solid #e7dfcc;border-bottom:1px solid #e7dfcc;padding:30px 0;margin-top:32px">
+  <div style="max-width:1080px;margin:0 auto;padding:0 22px">
+    <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center">
+      <div style="flex:1 1 520px;min-width:260px">
+        <h2 style="font-family:Georgia,serif;color:#0E2240;font-size:30px;line-height:1.12;margin:0 0 10px">Start with the Speak Malayalam book launch</h2>
+        <p style="color:#243247;margin:0 0 14px;max-width:760px">The new book path connects adult learning, kids books, script practice, flashcards, audio planning, parent routines and companion resources into one Malayalam learning system.</p>
+        <a href="/speak-malayalam-book-launch.html" style="display:inline-block;background:#C9A84C;color:#0E2240;padding:10px 17px;border-radius:24px;font-weight:800;text-decoration:none;margin:4px 8px 4px 0">See book launch</a>
+        <a href="/speak-malayalam-review-team.html" style="display:inline-block;background:#fff;color:#0E2240;border:1px solid #E7DFCC;padding:10px 17px;border-radius:24px;font-weight:800;text-decoration:none;margin:4px 8px 4px 0">Join review team</a>
+      </div>
+      <div style="background:#ffffff;border:1px solid #E7DFCC;border-radius:8px;padding:14px;color:#243247;flex:1 1 260px;min-width:240px"><strong>Best next step</strong><br>Choose the adult, kids, script or school/community path from the launch hub.</div>
+    </div>
+  </div>
+</section>
+<!-- BOOK_LAUNCH_FUNNEL_END -->
+<section class="graph-internal-links" aria-label="Continue through SpeakMalayalam" style="background:#f7fbf9;border-top:1px solid #dce7e3;border-bottom:1px solid #dce7e3;padding:26px 0;margin-top:30px">
+  <div style="max-width:1080px;margin:0 auto;padding:0 22px">
+    <h2 style="color:#103b35;margin-top:0">Continue through SpeakMalayalam</h2>
+    <p style="color:#35544f">Keep going with the most useful next steps for this topic.</p>
+    <ul style="columns:2;gap:28px;margin-bottom:0">
+      <li><a href="/malayalam-learning-path-finder.html">find your Malayalam learning path</a></li>
+      <li><a href="/ai-malayalam-tutor.html">AI Malayalam tutor</a></li>
+      <li><a href="/malayalam-gift-card.html">malayalam gift card</a></li>
+      <li><a href="/malayalam-books.html">Malayalam books and worksheets</a></li>
+      <li><a href="/speak-malayalam-app.html">Speak Malayalam app</a></li>
+      <li><a href="/malayalam-practice-challenges.html">Malayalam practice challenges</a></li>
+    </ul>
+  </div>
+</section>
+<!-- SM_CORE_KEYWORD_HUB_LINKS_START -->
+<section class="sm-core-keyword-hubs" data-sm-core-keyword-hubs="true" aria-label="Core Malayalam learning paths" style="background:#f8faf7;border-top:1px solid #dce7e3;border-bottom:1px solid #dce7e3;padding:22px 0;margin-top:28px">
+  <div style="max-width:1080px;margin:0 auto;padding:0 22px">
+    <h2 style="color:#103b35;margin:0 0 8px;font-size:28px;line-height:1.16">Core Malayalam learning paths</h2>
+    <p style="color:#35544f;margin:0 0 12px">Choose the main route that matches your next step.</p>
+    <p style="display:flex;flex-wrap:wrap;gap:10px;margin:0">
+      <a href="/how-to-learn-malayalam.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Learn Malayalam</a>
+      <a href="/malayalam-course.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam course</a>
+      <a href="/malayalam-lessons.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam lessons</a>
+      <a href="/malayalam-for-beginners.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam for beginners</a>
+      <a href="/malayalam-tutor.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam tutor</a>
+    </p>
+  </div>
+</section>
+<!-- SM_CORE_KEYWORD_HUB_LINKS_END -->
+</main>
+<footer class="network-footer" aria-label="SpeakMalayalam flashcard review network" style="background:#102f3f;color:#fff;padding:28px 0;margin-top:34px">
+  <div style="max-width:1080px;margin:0 auto;padding:0 22px">
+    <strong>SpeakMalayalam review mode</strong>
+    <p style="margin:8px 0 0;color:#dce5f1">Browser review -> hard-card list -> worksheet -> AI drill -> tutor feedback -> app, books, courses or certification path.</p>
+  </div>
+</footer>
+<script type="application/json" id="sm-flashcard-data">[{"id":"family-amma","category":"Family","front":"mother","back":"amma","example_roman":"Amma evide?","example_english":"Where is mother?","source_hub":"malayalam-dictionary.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-achan","category":"Family","front":"father","back":"achan","example_roman":"Achan vannu","example_english":"Father came","source_hub":"malayalam-dictionary.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-chechi","category":"Family","front":"elder sister","back":"chechi","example_roman":"Chechi veettil undo?","example_english":"Is elder sister at home?","source_hub":"malayalam-family-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-chettan","category":"Family","front":"elder brother","back":"chettan","example_roman":"Chettan evide aanu?","example_english":"Where is elder brother?","source_hub":"malayalam-family-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-aniyan","category":"Family","front":"younger brother","back":"aniyan","example_roman":"Aniyan schoolil aanu","example_english":"Younger brother is at school","source_hub":"malayalam-family-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-aniyathi","category":"Family","front":"younger sister","back":"aniyathi","example_roman":"Aniyathi padikkunnu","example_english":"Younger sister is studying","source_hub":"malayalam-family-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-ammumma","category":"Family","front":"grandmother","back":"ammumma","example_roman":"Ammumma sukhamano?","example_english":"Is grandmother well?","source_hub":"malayalam-family-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-appuppan","category":"Family","front":"grandfather","back":"appuppan","example_roman":"Appuppan ivide undu","example_english":"Grandfather is here","source_hub":"malayalam-family-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-koottukaran","category":"Family","front":"male friend","back":"koottukaran","example_roman":"Avan ente koottukaran aanu","example_english":"He is my friend","source_hub":"malayalam-common-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"family-koottukari","category":"Family","front":"female friend","back":"koottukari","example_roman":"Aval ente koottukari aanu","example_english":"She is my friend","source_hub":"malayalam-common-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"greetings-namaskaram","category":"Greetings","front":"hello","back":"namaskaram","example_roman":"Namaskaram","example_english":"Hello","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"greetings-sukhamano","category":"Greetings","front":"how are you","back":"sukhamano","example_roman":"Sukhamano?","example_english":"How are you?","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"greetings-sukhamanu","category":"Greetings","front":"I am well","back":"sukhamanu","example_roman":"Enikku sukhamanu","example_english":"I am well","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"greetings-nanni","category":"Greetings","front":"thank you","back":"nanni","example_roman":"Nanni","example_english":"Thank you","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"greetings-shari","category":"Greetings","front":"okay","back":"shari","example_roman":"Shari","example_english":"pinne kanam","source_hub":"Okay","practice_mode":"meaning_to_spoken_word"},{"id":"greetings-pinne-kanam","category":"Greetings","front":"see you later","back":"pinne kanam","example_roman":"Pinne kanam","example_english":"See you later","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-entha","category":"Questions","front":"what","back":"entha","example_roman":"Entha ithu?","example_english":"What is this?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-evide","category":"Questions","front":"where","back":"evide","example_roman":"Bathroom evide?","example_english":"Where is the bathroom?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-aaru","category":"Questions","front":"who","back":"aaru","example_roman":"Aaru vannu?","example_english":"Who came?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-eppo","category":"Questions","front":"when","back":"eppo","example_roman":"Eppo pokum?","example_english":"When will you go?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-engane","category":"Questions","front":"how","back":"engane","example_roman":"Engane undu?","example_english":"How is it?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-ethra","category":"Questions","front":"how much","back":"ethra","example_roman":"Ethra aanu?","example_english":"How much is it?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-enthinu","category":"Questions","front":"why","back":"enthinu","example_roman":"Enthinu?","example_english":"Why?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"questions-etha","category":"Questions","front":"which","back":"etha","example_roman":"Etha nallathu?","example_english":"Which is good?","source_hub":"malayalam-question-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-vellam","category":"Food","front":"water","back":"vellam","example_roman":"Vellam venam","example_english":"I need water","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-choru","category":"Food","front":"rice","back":"choru","example_roman":"Choru venam","example_english":"I want rice","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-chaaya","category":"Food","front":"tea","back":"chaaya","example_roman":"Chaaya undo?","example_english":"Do you have tea?","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-kaapi","category":"Food","front":"coffee","back":"kaapi","example_roman":"Kaapi venam","example_english":"I want coffee","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-pal","category":"Food","front":"milk","back":"pal","example_roman":"Pal kudikkumo?","example_english":"Will you drink milk?","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-pazham","category":"Food","front":"banana","back":"pazham","example_roman":"Pazham nallathanu","example_english":"The banana is good","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-meen","category":"Food","front":"fish","back":"meen","example_roman":"Meen curry venam","example_english":"I want fish curry","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"food-kozhi","category":"Food","front":"chicken","back":"kozhi","example_roman":"Kozhi curry undo?","example_english":"Do you have chicken curry?","source_hub":"malayalam-food-words.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-veedu","category":"Travel","front":"house","back":"veedu","example_roman":"Njan veettil aanu","example_english":"I am at home","source_hub":"malayalam-travel-phrases.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-vazhi","category":"Travel","front":"way","back":"vazhi","example_roman":"Vazhi evide?","example_english":"Where is the way?","source_hub":"malayalam-travel-phrases.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-bus","category":"Travel","front":"bus","back":"bus","example_roman":"Bus eppo varum?","example_english":"When will the bus come?","source_hub":"bus-train-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-train","category":"Travel","front":"train","back":"train","example_roman":"Train evide nirthum?","example_english":"Where will the train stop?","source_hub":"bus-train-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-auto","category":"Travel","front":"auto rickshaw","back":"auto","example_roman":"Auto venam","example_english":"I need an auto","source_hub":"auto-rickshaw-malayalam-phrases.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-hotel","category":"Travel","front":"hotel","back":"hotel","example_roman":"Hotel evide aanu?","example_english":"Where is the hotel?","source_hub":"hotel-checkin-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-kada","category":"Travel","front":"shop","back":"kada","example_roman":"Kada thuranno?","example_english":"Is the shop open?","source_hub":"malayalam-shopping.html","practice_mode":"meaning_to_spoken_word"},{"id":"travel-panam","category":"Travel","front":"money","back":"panam","example_roman":"Panam venam","example_english":"I need money","source_hub":"bank-atm-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-varu","category":"Verbs","front":"come","back":"varu","example_roman":"Ivide varu","example_english":"Come here","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-poku","category":"Verbs","front":"go","back":"poku","example_roman":"Namukku pokam","example_english":"Let us go","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-kazhikku","category":"Verbs","front":"eat","back":"kazhikku","example_roman":"Kazhikku","example_english":"Eat","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-kudikku","category":"Verbs","front":"drink","back":"kudikku","example_roman":"Vellam kudikku","example_english":"Drink water","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-parayu","category":"Verbs","front":"say or tell","back":"parayu","example_roman":"Parayu","example_english":"Tell me","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-kelkku","category":"Verbs","front":"listen","back":"kelkku","example_roman":"Kelkku","example_english":"Listen","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-nokku","category":"Verbs","front":"look","back":"nokku","example_roman":"Nokku","example_english":"Look","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"verbs-irikkuka","category":"Verbs","front":"sit","back":"irikkuka","example_roman":"Ivide irikku","example_english":"Sit here","source_hub":"malayalam-verbs.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-innu","category":"Daily","front":"today","back":"innu","example_roman":"Innu nalla divasam aanu","example_english":"Today is a good day","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-nale","category":"Daily","front":"tomorrow","back":"nale","example_roman":"Nale kanam","example_english":"See you tomorrow","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-innale","category":"Daily","front":"yesterday","back":"innale","example_roman":"Innale vannu","example_english":"I came yesterday","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-ravile","category":"Daily","front":"morning","back":"ravile","example_roman":"Ravile varam","example_english":"I will come in the morning","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-uchakku","category":"Daily","front":"noon","back":"uchakku","example_roman":"Uchakku kazhikkam","example_english":"We can eat at noon","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-vaikittu","category":"Daily","front":"evening","back":"vaikittu","example_roman":"Vaikittu kanam","example_english":"See you in the evening","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-rathri","category":"Daily","front":"night","back":"rathri","example_roman":"Rathri vilikku","example_english":"Call at night","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"daily-divasam","category":"Daily","front":"day","back":"divasam","example_roman":"Nalla divasam","example_english":"Good day","source_hub":"malayalam-days.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-dayavu-cheythu","category":"Politeness","front":"please","back":"dayavu cheythu","example_roman":"Dayavu cheythu sahayikkumo?","example_english":"Please help me","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-kshamikkanam","category":"Politeness","front":"sorry","back":"kshamikkanam","example_roman":"Kshamikkanam","example_english":"Sorry","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-prashnam-illa","category":"Politeness","front":"no problem","back":"prashnam illa","example_roman":"Prashnam illa","example_english":"No problem","source_hub":"malayalam-greetings.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-sahayam","category":"Politeness","front":"help","back":"sahayam","example_roman":"Sahayam venam","example_english":"I need help","source_hub":"how-to-say-can-you-help-me-in-malayalam.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-ariyilla","category":"Politeness","front":"I do not know","back":"ariyilla","example_roman":"Enikku ariyilla","example_english":"I do not know","source_hub":"daily-use-malayalam-sentences.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-ariyam","category":"Politeness","front":"I know","back":"ariyam","example_roman":"Enikku ariyam","example_english":"I know","source_hub":"daily-use-malayalam-sentences.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-manassilayi","category":"Politeness","front":"understood","back":"manassilayi","example_roman":"Manassilayi","example_english":"I understood","source_hub":"daily-use-malayalam-sentences.html","practice_mode":"meaning_to_spoken_word"},{"id":"politeness-manassilayilla","category":"Politeness","front":"did not understand","back":"manassilayilla","example_roman":"Manassilayilla","example_english":"I did not understand","source_hub":"daily-use-malayalam-sentences.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-onnu","category":"Numbers","front":"one","back":"onnu","example_roman":"Onnu venam","example_english":"I need one","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-randu","category":"Numbers","front":"two","back":"randu","example_roman":"Randu chaaya venam","example_english":"I need two teas","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-moonnu","category":"Numbers","front":"three","back":"moonnu","example_roman":"Moonnu divasam","example_english":"Three days","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-naalu","category":"Numbers","front":"four","back":"naalu","example_roman":"Naalu peru","example_english":"Four people","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-anju","category":"Numbers","front":"five","back":"anju","example_roman":"Anju minute","example_english":"Five minutes","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-pathu","category":"Numbers","front":"ten","back":"pathu","example_roman":"Pathu rupa","example_english":"Ten rupees","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-nooru","category":"Numbers","front":"hundred","back":"nooru","example_roman":"Nooru rupa","example_english":"Hundred rupees","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"numbers-ayiram","category":"Numbers","front":"thousand","back":"ayiram","example_roman":"Ayiram rupa","example_english":"Thousand rupees","source_hub":"malayalam-numbers.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-santhosham","category":"Feelings","front":"happiness","back":"santhosham","example_roman":"Enikku santhosham aanu","example_english":"I am happy","source_hub":"feelings-compliments-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-dukham","category":"Feelings","front":"sadness","back":"dukham","example_roman":"Enikku dukham aanu","example_english":"I am sad","source_hub":"feelings-compliments-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-bhayam","category":"Feelings","front":"fear","back":"bhayam","example_roman":"Enikku bhayam aanu","example_english":"I am afraid","source_hub":"feelings-compliments-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-deshyam","category":"Feelings","front":"anger","back":"deshyam","example_roman":"Deshyam venda","example_english":"Do not be angry","source_hub":"how-to-say-dont-be-angry-in-malayalam.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-ishtam","category":"Feelings","front":"like","back":"ishtam","example_roman":"Enikku ithu ishtam aanu","example_english":"I like this","source_hub":"feelings-compliments-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-ishtam-alla","category":"Feelings","front":"do not like","back":"ishtam alla","example_roman":"Enikku ishtam alla","example_english":"I do not like","source_hub":"feelings-compliments-malayalam-conversation.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-nalla","category":"Feelings","front":"good","back":"nalla","example_roman":"Ithu nalla aanu","example_english":"This is good","source_hub":"how-to-say-good-in-malayalam.html","practice_mode":"meaning_to_spoken_word"},{"id":"feelings-mosham","category":"Feelings","front":"bad","back":"mosham","example_roman":"Ithu mosham aanu","example_english":"This is bad","source_hub":"daily-use-malayalam-sentences.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-thalai","category":"Body","front":"head","back":"thalai","example_roman":"Ente thalai vedanikkunnu","example_english":"My head hurts","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-kai","category":"Body","front":"hand","back":"kai","example_roman":"Kai kazhukku","example_english":"Wash your hand","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-kaal","category":"Body","front":"leg","back":"kaal","example_roman":"Kaal vedanikkunnu","example_english":"Leg hurts","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-kannu","category":"Body","front":"eye","back":"kannu","example_roman":"Kannu thurakku","example_english":"Open your eyes","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-chevi","category":"Body","front":"ear","back":"chevi","example_roman":"Chevi vedanikkunnu","example_english":"Ear hurts","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-vaay","category":"Body","front":"mouth","back":"vaay","example_roman":"Vaay thurakku","example_english":"Open your mouth","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-pallu","category":"Body","front":"tooth","back":"pallu","example_roman":"Pallu vedanikkunnu","example_english":"Tooth hurts","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"body-hridayam","category":"Body","front":"heart","back":"hridayam","example_roman":"Ente hridayam nanni parayunnu","example_english":"My heart says thank you","source_hub":"malayalam-body-parts.html","practice_mode":"meaning_to_spoken_word"},{"id":"culture-onam","category":"Culture","front":"Onam","back":"onam","example_roman":"Onam ashamsakal","example_english":"Onam wishes","source_hub":"malayalam-festival-wishes.html","practice_mode":"meaning_to_spoken_word"},{"id":"culture-vishu","category":"Culture","front":"Vishu","back":"vishu","example_roman":"Vishu ashamsakal","example_english":"Vishu wishes","source_hub":"malayalam-festival-wishes.html","practice_mode":"meaning_to_spoken_word"},{"id":"culture-keralam","category":"Culture","front":"Kerala","back":"keralam","example_roman":"Keralam sundaram aanu","example_english":"Kerala is beautiful","source_hub":"about-malayalam-language.html","practice_mode":"meaning_to_spoken_word"},{"id":"culture-malayalam","category":"Culture","front":"Malayalam","back":"malayalam","example_roman":"Njan Malayalam padikkunnu","example_english":"I am learning Malayalam","source_hub":"how-to-learn-malayalam.html","practice_mode":"meaning_to_spoken_word"},{"id":"shopping-vila","category":"Shopping","front":"price","back":"vila","example_roman":"Vila ethra aanu?","example_english":"What is the price?","source_hub":"malayalam-shopping.html","practice_mode":"meaning_to_spoken_word"},{"id":"shopping-kurakkanam","category":"Shopping","front":"reduce","back":"kurakkanam","example_roman":"Konjam kurakkan pattumo?","example_english":"Can you reduce it a little?","source_hub":"malayalam-shopping.html","practice_mode":"meaning_to_spoken_word"},{"id":"shopping-venam","category":"Shopping","front":"want","back":"venam","example_roman":"Enikku ithu venam","example_english":"I want this","source_hub":"malayalam-shopping.html","practice_mode":"meaning_to_spoken_word"},{"id":"shopping-venda","category":"Shopping","front":"do not want","back":"venda","example_roman":"Ithu venda","example_english":"I do not want this","source_hub":"malayalam-shopping.html","practice_mode":"meaning_to_spoken_word"},{"id":"restaurant-bill","category":"Restaurant","front":"bill","back":"bill","example_roman":"Bill tharumo?","example_english":"Can you give the bill?","source_hub":"how-to-ask-for-the-bill-in-malayalam.html","practice_mode":"meaning_to_spoken_word"},{"id":"restaurant-menu","category":"Restaurant","front":"menu","back":"menu","example_roman":"Menu tharumo?","example_english":"Can you give the menu?","source_hub":"how-to-read-a-kerala-restaurant-menu.html","practice_mode":"meaning_to_spoken_word"},{"id":"restaurant-erivu","category":"Restaurant","front":"spicy","back":"erivu","example_roman":"Ithu erivu aanu","example_english":"This is spicy","source_hub":"malayalam-at-restaurant.html","practice_mode":"meaning_to_spoken_word"},{"id":"restaurant-ruchiyundu","category":"Restaurant","front":"tasty","back":"ruchiyundu","example_roman":"Ithu ruchiyundu","example_english":"This is tasty","source_hub":"malayalam-at-restaurant.html","practice_mode":"meaning_to_spoken_word"}]</script>
+<script>
+(function(){
+  var raw = document.getElementById("sm-flashcard-data");
+  var allCards = raw ? JSON.parse(raw.textContent || "[]") : [];
+  var stateKey = "sm_flashcard_review_v1";
+  var state = {seen:{}, hard:{}, filter:"All", index:0, flipped:false};
+  try { state = Object.assign(state, JSON.parse(localStorage.getItem(stateKey) || "{}")); } catch(e) {}
+  function save(){ try { localStorage.setItem(stateKey, JSON.stringify(state)); } catch(e) {} }
+  function categories(){ return ["All"].concat(Array.from(new Set(allCards.map(function(c){return c.category;}))).sort()); }
+  function deck(){ return allCards.filter(function(c){ return state.filter === "All" || c.category === state.filter; }); }
+  function current(){
+    var cards = deck();
+    if(!cards.length){ return null; }
+    state.index = ((state.index || 0) + cards.length) % cards.length;
+    return cards[state.index];
+  }
+  function renderFilters(){
+    var box = document.getElementById("sm-filters");
+    box.innerHTML = "";
+    categories().forEach(function(name){
+      var button = document.createElement("button");
+      button.type = "button";
+      button.textContent = name;
+      button.className = state.filter === name ? "active" : "";
+      button.addEventListener("click", function(){ state.filter = name; state.index = 0; state.flipped = false; save(); render(); });
+      box.appendChild(button);
+    });
+  }
+  function renderStats(){
+    document.getElementById("sm-total").textContent = deck().length;
+    document.getElementById("sm-seen").textContent = Object.keys(state.seen || {}).length;
+    document.getElementById("sm-hard").textContent = Object.keys(state.hard || {}).length;
+  }
+  function render(){
+    var card = current();
+    renderFilters();
+    renderStats();
+    if(!card){ return; }
+    document.getElementById("sm-card-category").textContent = card.category;
+    document.getElementById("sm-card-front").textContent = state.flipped ? card.back : card.front;
+    document.getElementById("sm-card-back").hidden = !state.flipped;
+    document.getElementById("sm-card-back").textContent = card.front + " -> " + card.back;
+    document.getElementById("sm-card-example").textContent = state.flipped ? (card.example_roman + " - " + card.example_english) : "Say the Malayalam answer before flipping.";
+  }
+  function next(delta){ var cards = deck(); if(cards.length){ state.index = ((state.index || 0) + delta + cards.length) % cards.length; state.flipped = false; save(); render(); } }
+  function mark(kind){
+    var card = current();
+    if(!card){ return; }
+    state.seen = state.seen || {};
+    state.hard = state.hard || {};
+    state.seen[card.id] = true;
+    if(kind === "hard"){ state.hard[card.id] = true; } else { delete state.hard[card.id]; }
+    next(1);
+  }
+  function csvEscape(value){ value = String(value == null ? "" : value); return '"' + value.replace(/"/g, '""') + '"'; }
+  function download(name, type, text){
+    var blob = new Blob([text], {type:type});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 500);
+  }
+  document.getElementById("sm-flip").addEventListener("click", function(){ state.flipped = !state.flipped; save(); render(); });
+  document.getElementById("sm-again").addEventListener("click", function(){ mark("hard"); });
+  document.getElementById("sm-good").addEventListener("click", function(){ mark("good"); });
+  document.getElementById("sm-next").addEventListener("click", function(){ next(1); });
+  document.getElementById("sm-export-anki").addEventListener("click", function(){
+    var rows = [["Front","Back","ExampleRoman","ExampleEnglish","Tags"]].concat(allCards.map(function(c){ return [c.front,c.back,c.example_roman,c.example_english,"malayalam " + c.category.toLowerCase().replace(/\s+/g,"-")]; }));
+    download("speakmalayalam-anki-style-flashcards.csv", "text/csv", rows.map(function(r){ return r.map(csvEscape).join(","); }).join("\r\n"));
+  });
+  document.getElementById("sm-export-quizlet").addEventListener("click", function(){
+    download("speakmalayalam-quizlet-style-flashcards.tsv", "text/tab-separated-values", allCards.map(function(c){ return c.front + "\t" + c.back + " | " + c.example_roman + " | " + c.example_english; }).join("\r\n"));
+  });
+  document.getElementById("sm-export-json").addEventListener("click", function(){
+    download("speakmalayalam-flashcard-review-deck.json", "application/json", JSON.stringify(allCards, null, 2));
+  });
+  render();
+})();
+</script>
+<!-- SM_BACK_TO_TOP_BUTTON_START -->
+<button type="button" class="sm-back-to-top" aria-label="Back to top" title="Back to top" data-sm-back-to-top>&#8593;</button>
+<script>
+(function(){
+  var button = document.querySelector("[data-sm-back-to-top]");
+  if(!button){return;}
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function updateButton(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    button.classList.toggle("is-visible", y > 420);
+  }
+  button.addEventListener("click", function(){
+    try {
+      window.scrollTo({top:0, behavior: reduceMotion ? "auto" : "smooth"});
+    } catch(e) {
+      window.scrollTo(0, 0);
+    }
+  });
+  window.addEventListener("scroll", updateButton, {passive:true});
+  window.addEventListener("load", updateButton);
+  updateButton();
+})();
+</script>
+<!-- SM_BACK_TO_TOP_BUTTON_END -->
+</body>
+</html>
+
+
+
+
+
+

@@ -13,6 +13,16 @@
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif;line-height:1.6}a{color:var(--teal)}.wrap{max-width:1120px;margin:0 auto;padding:0 22px}header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800;color:var(--navy);text-decoration:none}.links{display:flex;gap:14px;flex-wrap:wrap}.links a{font-weight:700;text-decoration:none}.hero{background:var(--navy);color:#fff;padding:44px 0}.hero h1{font-family:Georgia,serif;font-size:clamp(2.1rem,5vw,4.2rem);line-height:1.04;margin:8px 0 12px}.hero p{font-size:1.14rem;color:#dcebf0;max-width:820px}.ey{text-transform:uppercase;letter-spacing:.1em;color:#d9bf67;font-size:.78rem;font-weight:800}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:6px;padding:10px 16px;background:var(--teal);color:#fff!important;text-decoration:none;font-weight:800;cursor:pointer}.btn.secondary{background:#fff;color:var(--navy)!important;border:1px solid var(--line)}section{padding:36px 0}.tool{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:18px;align-items:start}.panel,.card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:20px}.panel h2,.card h2{font-family:Georgia,serif;color:var(--navy);font-size:1.8rem;line-height:1.15;margin:0 0 12px}.field{margin:0 0 16px}.field label{display:block;font-weight:800;color:var(--navy);margin:0 0 6px}select{width:100%;min-height:44px;border:1px solid #b9cbc5;border-radius:6px;background:#fff;color:var(--ink);padding:10px;font-size:1rem}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.result{background:#f8fbfa;border:1px solid var(--line);border-radius:8px;padding:18px;min-height:350px}.result h3{margin-top:0;color:var(--navy);font-size:1.45rem}.path-list{display:grid;gap:10px;margin:12px 0}.path-link{display:block;background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:6px;padding:12px;text-decoration:none;color:var(--ink)}.path-link strong{display:block;color:var(--navy)}.tagbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.tag{border:1px solid var(--line);background:var(--mint);color:#173a32;border-radius:999px;padding:5px 10px;font-size:.86rem;font-weight:700}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.band{background:var(--mint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.small{color:var(--muted);font-size:.94rem}.route{border-left:5px solid var(--gold);padding-left:14px}.route strong{color:var(--navy)}@media(max-width:840px){.tool,.grid{grid-template-columns:1fr}.links a:not(.btn){display:none}.hero{padding:36px 0}.wrap{padding:0 18px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Malayalam Learning Path Finder","description":"A beginner-friendly Malayalam learning path finder that routes learners to lessons, courses, tutor support, books, membership, AI tutor practice and certification.","learningResourceType":"self assessment","educationalLevel":"beginner","provider":{"@type":"Organization","name":"SpeakMalayalam","url":"https://speakmalayalam.com/"}}</script>
+<!-- SM_BACK_TO_TOP_STYLE_START -->
+<style>
+.sm-back-to-top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));width:46px;height:46px;border:0;border-radius:999px;background:#0E2240;color:#fff;box-shadow:0 10px 24px rgba(14,34,64,.24);display:grid;place-items:center;font-size:22px;font-weight:800;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease;z-index:9999}
+.sm-back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+.sm-back-to-top:hover{background:#17345d}
+.sm-back-to-top:focus{outline:3px solid #C9A84C;outline-offset:3px}
+@media(max-width:640px){.sm-back-to-top{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:44px;height:44px;font-size:21px}}
+@media(prefers-reduced-motion:reduce){.sm-back-to-top{transition:none}}
+</style>
+<!-- SM_BACK_TO_TOP_STYLE_END -->
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="/">SpeakMalayalam</a><div class="links"><a href="/how-to-learn-malayalam.html">Learn</a><a href="/malayalam-speaking-course.html">Course</a><a href="/malayalam-tutor.html">Tutor</a><a href="/free-malayalam-starter-pack.html" class="btn">Start Free</a></div></nav></div></header>
@@ -27,7 +37,7 @@
 <div class="field"><label for="mode">Preferred support</label><select id="mode" name="mode"><option value="free">Free lessons first</option><option value="course">A structured Malayalam course</option><option value="tutor">A human Malayalam tutor</option><option value="ai">App or AI tutor practice</option><option value="books">Books and worksheets</option><option value="membership">Monthly practice membership</option></select></div>
 <div class="field"><label for="struggle">Biggest struggle</label><select id="struggle" name="struggle"><option value="speaking">Speaking full sentences</option><option value="listening">Understanding spoken Malayalam</option><option value="pronunciation">Pronunciation and natural sound</option><option value="script">Reading Malayalam script</option><option value="routine">Practicing consistently</option><option value="proof">Knowing whether I am ready</option></select></div>
 <div class="field"><label for="intent">What should happen next?</label><select id="intent" name="intent"><option value="start">Start today for free</option><option value="buy">Compare paid learning options</option><option value="book">Book personal correction</option><option value="practice">Practice every week</option><option value="certify">Prepare for certification</option><option value="hire">Hire or apply for Malayalam work</option></select></div>
-<div class="actions"><button class="btn" type="submit">Show my path</button><a class="btn secondary" href="/malayalam-level-test.html">Take self-test</a></div>
+<div class="actions"><button class="btn" type="submit">Show my path</button><a class="btn secondary" href="/malayalam-beginner-self-test-ready-for-conversations.html">Take self-test</a></div>
 <p class="small">This page does not collect private contact details. When a form tool is connected later, the same route can become a consent-based email or CRM tag.</p>
 </form>
 
@@ -49,11 +59,36 @@
 </div></div></section>
 
 <section><div class="wrap"><h2>Common routes</h2>
-<p class="route"><strong>Absolute beginner:</strong> <a href="/free-malayalam-starter-pack.html">starter pack</a> -> <a href="/malayalam-for-beginners.html">beginner hub</a> -> <a href="/malayalam-speaking-course.html">course bundle</a>.</p>
-<p class="route"><strong>Heritage family:</strong> <a href="/malayalam-for-nris.html">NRI family path</a> -> <a href="/malayalam-kids-books.html">kids books</a> -> <a href="/malayalam-tutor.html">tutor support</a>.</p>
-<p class="route"><strong>Practice learner:</strong> <a href="/malayalam-practice-challenges.html">practice challenges</a> -> <a href="/ai-malayalam-tutor.html">AI prompts</a> -> <a href="/malayalam-membership.html">membership</a>.</p>
-<p class="route"><strong>Proof or work:</strong> <a href="/malayalam-certification.html">starter test</a> -> <a href="/malayalam-certification.html">scoring</a> -> <a href="/malayalam-tutor.html">tutor pathway</a> or <a href="/malayalam-employer-inquiry.html">employer inquiry</a>.</p>
+<p class="route"><strong>Absolute beginner:</strong> <a href="/free-malayalam-starter-pack.html">starter pack</a> -> <a href="/malayalam-for-beginners.html">beginner hub</a> -> <a href="/malayalam-course-bundle.html">course bundle</a>.</p>
+<p class="route"><strong>Heritage family:</strong> <a href="/malayalam-for-nri-families.html">NRI family path</a> -> <a href="/malayalam-kids-books.html">kids books</a> -> <a href="/malayalam-tutor.html">tutor support</a>.</p>
+<p class="route"><strong>Practice learner:</strong> <a href="/malayalam-practice-challenges.html">practice challenges</a> -> <a href="/ai-malayalam-tutor-practice.html">AI prompts</a> -> <a href="/malayalam-membership-pricing.html">membership</a>.</p>
+<p class="route"><strong>Proof or work:</strong> <a href="/malayalam-certification-starter-test.html">starter test</a> -> <a href="/malayalam-certification-scoring.html">scoring</a> -> <a href="/malayalam-tutor-application.html">tutor pathway</a> or <a href="/malayalam-employer-inquiry.html">employer inquiry</a>.</p>
 </div></section>
+<!-- SM_CORE_KEYWORD_HUB_LINKS_START -->
+<section class="sm-core-keyword-hubs" data-sm-core-keyword-hubs="true" aria-label="Core Malayalam learning paths" style="background:#f8faf7;border-top:1px solid #dce7e3;border-bottom:1px solid #dce7e3;padding:22px 0;margin-top:28px">
+  <div style="max-width:1080px;margin:0 auto;padding:0 22px">
+    <h2 style="color:#103b35;margin:0 0 8px;font-size:28px;line-height:1.16">Core Malayalam learning paths</h2>
+    <p style="color:#35544f;margin:0 0 12px">Choose the main route that matches your next step.</p>
+    <p style="display:flex;flex-wrap:wrap;gap:10px;margin:0">
+      <a href="/how-to-learn-malayalam.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Learn Malayalam</a>
+      <a href="/malayalam-course.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam course</a>
+      <a href="/malayalam-lessons.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam lessons</a>
+      <a href="/malayalam-for-beginners.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam for beginners</a>
+      <a href="/malayalam-tutor.html" style="display:inline-block;background:#ffffff;border:1px solid #dce7e3;border-radius:24px;padding:9px 14px;color:#0B6B5A;font-weight:800;text-decoration:none">Malayalam tutor</a>
+    </p>
+  </div>
+</section>
+<!-- SM_CORE_KEYWORD_HUB_LINKS_END -->
+<!-- SM_STUDENT_PORTAL_LINK_START -->
+<section class="sm-student-portal-link" aria-label="Malayalam student portal" style="background:#eef6f5;border-top:1px solid #d7e8e5;border-bottom:1px solid #d7e8e5;padding:28px 0;margin-top:28px">
+  <div style="max-width:1120px;margin:0 auto;padding:0 22px;color:#243247;font-family:Arial,sans-serif;line-height:1.55">
+    <h2 style="font-family:Georgia,serif;color:#0E2240;font-size:30px;line-height:1.12;margin:0 0 10px">Open your Malayalam student portal</h2>
+    <p style="margin:0 0 14px;max-width:760px">Use one private-on-device home base for lessons, progress, quiz, flashcards, worksheets, AI tutor prompts, trial lesson and course routes.</p>
+    <a href="/malayalam-student-portal.html" style="display:inline-block;background:#0E2240;color:#fff;padding:10px 17px;border-radius:24px;font-weight:800;text-decoration:none;margin:4px 8px 4px 0">Open student portal</a>
+    <a href="/my-progress.html" style="display:inline-block;background:#fff;color:#0E2240;border:1px solid #d7e8e5;padding:10px 17px;border-radius:24px;font-weight:800;text-decoration:none;margin:4px 8px 4px 0">View progress</a>
+  </div>
+</section>
+<!-- SM_STUDENT_PORTAL_LINK_END -->
 <!-- BOOK_LAUNCH_FUNNEL_START -->
 <section class="book-launch-funnel" aria-label="Speak Malayalam book launch" style="background:#fff8e6;border-top:1px solid #e7dfcc;border-bottom:1px solid #e7dfcc;padding:30px 0;margin-top:32px">
   <div style="max-width:1080px;margin:0 auto;padding:0 22px">
@@ -126,11 +161,40 @@
 <footer class="network-footer" aria-label="SpeakMalayalam network" style="background:#102f3f;color:#fff;padding:28px 0;margin-top:34px">
   <div style="max-width:1120px;margin:0 auto;padding:0 22px">
     <strong>SpeakMalayalam Network</strong>
-    <p style="margin:8px 0 0;color:#dcebf0"><a style="color:#fff" href="/malayalam-learning-path-finder.html">Find your path</a> | <a style="color:#fff" href="/how-to-learn-malayalam.html">Learn Malayalam</a> | <a style="color:#fff" href="/malayalam-speaking-course.html">Course</a> | <a style="color:#fff" href="/malayalam-tutor.html">Tutor</a> | <a style="color:#fff" href="/malayalam-practice.html">App</a> | <a style="color:#fff" href="/online-malayalam-classes.html">Pricing</a> | <a style="color:#fff" href="/malayalam-certification.html">Certification</a> | <a style="color:#fff" href="/malayalam-jobs.html">Jobs</a> | <a style="color:#fff" href="/malayalam-books.html">Books</a> | <a style="color:#fff" href="/corporate-malayalam-training.html">Corporate training</a></p>
+    <p style="margin:8px 0 0;color:#dcebf0"><a style="color:#fff" href="/malayalam-learning-path-finder.html">Find your path</a> | <a style="color:#fff" href="/how-to-learn-malayalam.html">Learn Malayalam</a> | <a style="color:#fff" href="/malayalam-speaking-course.html">Course</a> | <a style="color:#fff" href="/malayalam-tutor.html">Tutor</a> | <a style="color:#fff" href="/speak-malayalam-app.html">App</a> | <a style="color:#fff" href="/speak-malayalam-pricing.html">Pricing</a> | <a style="color:#fff" href="/malayalam-certification-starter-test.html">Certification</a> | <a style="color:#fff" href="/malayalam-jobs.html">Jobs</a> | <a style="color:#fff" href="/malayalam-books.html">Books</a> | <a style="color:#fff" href="/corporate-malayalam-training.html">Corporate training</a></p>
   </div>
 </footer>
+<!-- SM_BACK_TO_TOP_BUTTON_START -->
+<button type="button" class="sm-back-to-top" aria-label="Back to top" title="Back to top" data-sm-back-to-top>&#8593;</button>
+<script>
+(function(){
+  var button = document.querySelector("[data-sm-back-to-top]");
+  if(!button){return;}
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function updateButton(){
+    var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    button.classList.toggle("is-visible", y > 420);
+  }
+  button.addEventListener("click", function(){
+    try {
+      window.scrollTo({top:0, behavior: reduceMotion ? "auto" : "smooth"});
+    } catch(e) {
+      window.scrollTo(0, 0);
+    }
+  });
+  window.addEventListener("scroll", updateButton, {passive:true});
+  window.addEventListener("load", updateButton);
+  updateButton();
+})();
+</script>
+<!-- SM_BACK_TO_TOP_BUTTON_END -->
 </body>
 </html>
+
+
+
+
+
 
 
 
