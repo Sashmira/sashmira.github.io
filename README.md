@@ -1,2 +1,2 @@
 # RRN Colloquial Malayalam
-Learn to speak Malayalam with Dr. Reshmi R Nair.
+Learn to speak Malayalam with Reshmi R Nair.
