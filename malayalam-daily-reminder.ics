@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//speakmalayalam.com//Daily Malayalam Practice//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:daily-malayalam-practice-2026@speakmalayalam.com
+DTSTAMP:20260704T120000Z
+DTSTART:20260705T190000
+RRULE:FREQ=DAILY
+SUMMARY:Daily Malayalam Practice (10 min)
+DESCRIPTION:10 minutes of Malayalam - today's video + lesson: https://speakmalayalam.com/malayalam-daily-practice.html
+URL:https://speakmalayalam.com/malayalam-daily-practice.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Time for your daily Malayalam practice!
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
