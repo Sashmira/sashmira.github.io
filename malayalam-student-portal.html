@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <script>(function(){if(window.self!==window.top){try{window.top.location.replace(window.self.location.href);}catch(e){document.documentElement.style.display="none";}}})();</script>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malayalam Student Portal - Learn, Practice, Track and Continue</title>
@@ -114,6 +114,14 @@
 @media(prefers-reduced-motion:reduce){.sm-back-to-top{transition:none}}
 </style>
 <!-- SM_BACK_TO_TOP_STYLE_END -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NR81BKS7FX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NR81BKS7FX', { 'anonymize_ip': true }); gtag('config','AW-10945166310');
+</script>
 </head>
 <body><a class="skip-link" href="#main">Skip to main content</a><style>.skip-link{position:absolute;left:-9999px;top:0;background:#0E2240;color:#fff;padding:8px 14px;border-radius:0 0 6px 0;z-index:99999;font-weight:700}.skip-link:focus{left:0}</style>
 <header><nav><a class="brand" href="/">SpeakMalayalam</a><div class="nav-links"><a href="/malayalam-lessons.html">Lessons</a><a href="/malayalam-practice.html">Practice</a><a href="/my-progress.html">Progress</a><a href="/speak-malayalam-app.html">App</a><a class="btn dark" href="/free-malayalam-starter-pack.html">Starter pack</a></div></nav></header>
