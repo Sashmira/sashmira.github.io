@@ -18,10 +18,18 @@
 :root{--navy:#0E2240;--gold:#C9A84C;--teal:#177E70;--ivory:#FCF9F2;--paper:#F4EDDF;--ink:#16243B;--muted:#5A6478;--line:rgba(14,34,64,.14);--who:#3E7CC0;--what:#E0952A;--verb:#D64B3C;--be-aanu:#2980B9;--be-undu:#27AE60;--be-illa:#D64B3C;--be-alla:#E0952A;--stem:#7E44A0;--display:Georgia,serif;--body:Arial,sans-serif}
 *{box-sizing:border-box}body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--body);line-height:1.66}
 a{color:var(--teal)}
-header{position:sticky;top:0;z-index:100;background:rgba(252,249,242,.96);border-bottom:1px solid var(--line)}
-nav{max-width:1120px;margin:0 auto;padding:0 22px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{font-family:var(--display);font-weight:700;color:var(--navy);text-decoration:none;font-size:19px}
-.nav-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.nav-links a{text-decoration:none;color:var(--ink);font-weight:700;font-size:14px}
+.topbar{background:var(--navy);color:#fff;text-align:center;font-size:13px;padding:7px 12px}.topbar b{color:var(--gold)}
+header{position:sticky;top:0;z-index:100;background:rgba(252,249,242,.97);border-bottom:1px solid var(--line)}
+nav{max-width:1180px;margin:0 auto;padding:0 22px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand .mark{width:44px;height:44px;border-radius:50%;background:var(--navy);border:2px solid var(--gold);color:var(--gold);font-family:var(--display);font-weight:700;font-size:15px;display:grid;place-items:center;flex:0 0 44px}
+.brand .bname{font-family:var(--display);font-weight:700;color:var(--navy);font-size:18px;line-height:1.12}
+.brand .bsub{display:block;color:var(--teal);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.nav-links{display:flex;gap:16px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:700;font-size:14px;white-space:nowrap}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.btn{background:var(--navy);color:#fff;border-radius:30px;padding:10px 18px}
+@media(max-width:980px){.nav-links{gap:13px;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;padding-bottom:2px}.brand .bsub{display:none}}
 .btn{display:inline-block;background:var(--gold);color:var(--navy);padding:11px 20px;border-radius:30px;font-weight:800;text-decoration:none;border:0;cursor:pointer}.btn.dark{background:var(--navy);color:#fff}.btn.light{background:#fff;border:1px solid var(--line);color:var(--navy)}
 .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
 .hero{background:linear-gradient(135deg,var(--navy),#16324a);color:#fff;padding:60px 0 50px}
@@ -59,7 +67,7 @@ th.stem{background:var(--stem)}th.now{background:var(--be-aanu)}th.fut{backgroun
 .cta{background:var(--navy);color:#fff;border-radius:16px;padding:30px 26px;text-align:center;margin:8px 0}
 .cta h2{color:#fff}.cta p{color:rgba(252,249,242,.9);max-width:640px;margin:0 auto 16px}
 footer{background:var(--navy);color:rgba(252,249,242,.78);padding:28px 0;font-size:14px}footer a{color:#fff}
-@media(max-width:760px){.laws,.matrix,.chips{grid-template-columns:1fr}.slots{flex-direction:column}.nav-links a:not(.btn){display:none}}
+@media(max-width:760px){.laws,.matrix,.chips{grid-template-columns:1fr}.slots{flex-direction:column}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"How Malayalam Sentences Work - The Lego-Block Method","description":"Malayalam grammar is built like Lego: fixed slots you snap words into. A free visual guide to spoken Malayalam for English speakers.","author":{"@type":"Person","name":"Reshmi R Nair","jobTitle":"Malayalam Linguist"},"publisher":{"@type":"Organization","name":"SpeakMalayalam","url":"https://speakmalayalam.com/"},"mainEntityOfPage":"https://speakmalayalam.com/how-malayalam-sentences-work.html","inLanguage":"en"}
@@ -86,13 +94,24 @@ ml('account', '2430406');
 <!-- End MailerLite Universal -->
 </head>
 <body>
+<div class="topbar">Trusted by learners of all ages in <b>10+ countries</b> &middot; One-to-one lessons across <b>every time zone</b></div>
 <header><nav>
-  <a class="brand" href="/">SpeakMalayalam</a>
+  <a class="brand" href="/">
+    <span class="mark">RRN</span>
+    <span><span class="bname">Reshmi R Nair</span><span class="bsub">Colloquial Malayalam</span></span>
+  </a>
   <div class="nav-links">
-    <a href="/malayalam-phrasebook.html">Phrasebook</a>
-    <a href="/malayalam-daily-practice.html">Daily practice</a>
-    <a href="/malayalam-tutor.html">Tutor</a>
-    <a class="btn dark" href="/book-malayalam-trial-lesson.html">Book a lesson</a>
+    <a href="/#about">About</a>
+    <a href="/#who">Who It's For</a>
+    <a href="/#method">The Method</a>
+    <a href="/#courses">Courses</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/malayalam-daily-practice.html">&#128293; Daily Practice</a>
+    <a href="/#stories">Video Stories</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog.html">Guides</a>
+    <a href="/malayalam-learning-network.html">Network</a>
+    <a class="btn" href="/book-malayalam-trial-lesson.html">Book a Lesson</a>
   </div>
 </nav></header>
 <main>
