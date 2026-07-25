@@ -93,6 +93,7 @@ ml('account', '2430406');
       <div class="form-row"><label for="level">Current level</label><select id="level" name="current_level" required><option>Zero beginner</option><option>I know a few words</option><option>I understand but cannot reply</option><option>I can speak a little</option><option>Returning heritage learner</option></select></div>
       <div class="form-row"><label for="preferred-time">Preferred days or times</label><input id="preferred-time" name="preferred_days_or_times" type="text" required placeholder="Example: weekends, weekday evenings"></div>
       <div class="form-row"><label for="notes">What should the lesson help with?</label><textarea id="notes" name="lesson_notes" rows="4" required placeholder="Share family, child, travel, pronunciation, course or schedule needs."></textarea></div>
+      <div class="form-row"><label for="partner-code">Partner / referral code (optional)</label><input id="partner-code" name="partner_code" type="text" placeholder="If a Malayali association referred you, enter their code (e.g. FOKANA)"><span class="small">Members of a partner association get a special discount &mdash; enter your association's code.</span></div>
       <!-- SM_FUNNEL_ATTRIBUTION_FIELDS_START -->
 <input type="hidden" name="lead_current_url" value="">
 <input type="hidden" name="lead_landing_page" value="">
@@ -174,6 +175,24 @@ ml('account', '2430406');
 })();
 </script>
 <!-- SM_FUNNEL_ATTRIBUTION_SCRIPT_END -->
+<!-- SM_PARTNER_REFERRAL_START -->
+<script>
+(function(){
+  try{
+    var params=new URLSearchParams(window.location.search);
+    var ref=(params.get('ref')||params.get('partner')||params.get('utm_source')||'').trim();
+    if(ref){ try{ sessionStorage.setItem('sm_partner_ref', ref); }catch(e){} }
+    var stored='';
+    try{ stored=sessionStorage.getItem('sm_partner_ref')||''; }catch(e){}
+    var code=(ref||stored||'').toUpperCase();
+    if(code){
+      var field=document.getElementById('partner-code');
+      if(field && !field.value){ field.value=code; }
+    }
+  }catch(e){}
+})();
+</script>
+<!-- SM_PARTNER_REFERRAL_END -->
 <!-- SM_BACK_TO_TOP_BUTTON_START -->
 <button type="button" class="sm-back-to-top" aria-label="Back to top" title="Back to top" data-sm-back-to-top>&#8593;</button>
 <script>
