@@ -1,0 +1,5 @@
+
+# Claude session backups - keep local, never publish
+_backup_malayalam-resources.html
+_sitemap_backup_before_rebuild.xml
+.git/index.lock.stale-remove-me
