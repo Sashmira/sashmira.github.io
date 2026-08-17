@@ -3,3 +3,16 @@
 _backup_malayalam-resources.html
 _sitemap_backup_before_rebuild.xml
 .git/index.lock.stale-remove-me
+
+# --- security: internal files, never publish to the live site ---
+AUTO-PUBLISH.ps1
+PUSH_AUDIO.bat
+PUSH_REFERRAL.bat
+PUSH_REFERRAL_WRANGLER.bat
+SETUP - Turn On Auto-Publish (run once).bat
+PUBLISH-NOW.bat
+SECURE-SITE.bat
+_autopublish_log.txt
+_mp.txt
+_deleted_manifest.txt
+_gitignore.bak
