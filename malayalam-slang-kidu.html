@@ -63,6 +63,19 @@ footer{padding:26px 0 44px;color:var(--muted);font-size:.85rem;border-top:1px so
 .crumb a{color:var(--muted);font-weight:400}
 @media(max-width:840px){.grid2,.grid3{grid-template-columns:1fr}.links a:not(.btn){display:none}}
 </style>
+<style id="sm-responsive-safeguard">
+/* Cross-device safeguard - additive, non-destructive (speakmalayalam) */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,iframe,canvas,object,embed{max-width:100%;height:auto}
+pre,code{white-space:pre-wrap;overflow-wrap:anywhere}
+p,li,h1,h2,h3,h4,td,th,a,span{overflow-wrap:break-word}
+table{max-width:100%}
+@media (max-width:680px){
+  table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table thead,table tbody,table tr{width:max-content;min-width:100%}
+  table td,table th{white-space:nowrap}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main" style="position:absolute;left:-9999px">Skip to main content</a>

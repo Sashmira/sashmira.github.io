@@ -360,6 +360,22 @@ n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
 ml('account', '2430406');
 </script>
 <!-- End MailerLite Universal -->
+<style id="sm-responsive-safeguard">
+/* Cross-device safeguard (homepage) - additive, non-destructive */
+img,svg,video,iframe{max-width:100%;height:auto}
+/* Phones: collapse footer grid to one column (was 1.4fr 1fr 1fr, overflowed) */
+@media(max-width:640px){
+  .foot-grid{grid-template-columns:1fr !important;gap:24px !important}
+  .foot-grid > *{min-width:0;overflow-wrap:break-word}
+}
+/* Tablet-landscape / small laptops (881-1160px): extend the existing hamburger
+   so the horizontal nav (needs ~1150px) never runs off the right edge */
+@media(max-width:1160px){
+  .nav-links{position:fixed;inset:78px 0 auto 0;background:var(--ivory);flex-direction:column;padding:30px;gap:20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s;align-items:flex-start;z-index:99}
+  .nav-links.open{transform:translateY(0)}
+  .menu-toggle{display:flex}
+}
+</style>
 </head>
 <body>
 <a href="#top" class="skip">Skip to content</a>
