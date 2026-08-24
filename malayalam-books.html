@@ -390,5 +390,8 @@ p,li,h1,h2,h3,h4,td,th,a,span{overflow-wrap:break-word}
 <script>
 (function(){var b=document.querySelector("[data-sm-back-to-top]");if(!b)return;var rm=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;function u(){var y=window.pageYOffset||document.documentElement.scrollTop||0;b.classList.toggle("is-visible",y>420);}b.addEventListener("click",function(){try{window.scrollTo({top:0,behavior:rm?"auto":"smooth"});}catch(e){window.scrollTo(0,0);}});window.addEventListener("scroll",u,{passive:true});window.addEventListener("load",u);u();})();
 </script>
+<script id="sm-ga4-events">
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a||!a.href)return;var h=a.href;if(typeof gtag!=='function')return;if(/book-malayalam-trial-lesson|malayalam-tutor|book-a-lesson|calendly|#book/i.test(h)){gtag('event','generate_lead',{link_url:h});}else if(/free-malayalam-starter-pack/i.test(h)){gtag('event','starter_pack_signup',{link_url:h});}else if(/amazon\.[a-z.]+\/dp\//i.test(h)){gtag('event','book_buy_click',{link_url:h});gtag('event','book_click',{event_category:'purchase',event_label:'amazon',link_url:h});}},true);
+</script>
 </body>
 </html>
