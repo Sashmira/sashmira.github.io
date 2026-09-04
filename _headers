@@ -1,0 +1,7 @@
+# Stop the lead-magnet PDF competing with the HTML phrasebook in search
+/100-malayalam-phrases.pdf
+  X-Robots-Tag: noindex
+/Kerala-Survival-Malayalam-Cheat-Sheet.pdf
+  X-Robots-Tag: noindex
+/Malayalam-Pronunciation-Guide.pdf
+  X-Robots-Tag: noindex

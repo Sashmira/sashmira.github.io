@@ -1,3 +1,8 @@
+# --- canonicalisation (added 2026-09-04) ---
+https://www.speakmalayalam.com/* https://speakmalayalam.com/:splat 301!
+/malayalam-days.html /malayalam-days-of-the-week.html 301
+/how-to-say-today-tomorrow-yesterday-in-malayalam.html /malayalam-days-of-the-week.html 301
+/100-malayalam-phrases.pdf /malayalam-phrasebook.html 301
 # SpeakMalayalam crawler wall - deleted thin pages return 410 Gone
 # Cleans up the June mass-page incident so Google de-indexes them fast.
 

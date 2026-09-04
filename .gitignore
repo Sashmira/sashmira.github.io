@@ -17,3 +17,6 @@ _mp.txt
 _deleted_manifest.txt
 _gitignore.bak
 _backup_*.html
+
+_backups/
+*.bak
