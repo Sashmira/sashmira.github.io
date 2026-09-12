@@ -32,3 +32,20 @@ If your commit is blocked, **that is the safety net working as intended.** Do no
 with `--no-verify`. Do not delete the hook. If you believe a specific page genuinely deserves
 to be promoted, do it **one page at a time, by hand, with the owner's explicit approval** —
 never in bulk.
+
+---
+
+## ⚠️ INTERPRETATION RULE (owner's standing order — added 2026-09-12)
+
+When the owner (Reshmi) or anyone says any of the following:
+"index and crawl everything", "publish everything", "do it all now",
+"bulk publish", "un-hide the pages", "restore everything", or anything similar —
+
+**THOSE INSTRUCTIONS NEVER INCLUDE THE FORBIDDEN PAGES in `_FORBIDDEN_PAGES.txt`.**
+
+Those commands are about the ~263 GOOD, indexable pages only. The 366 forbidden
+pages stay hidden, noindex, and out of the sitemap FOREVER, at any cost, no matter
+how the instruction is phrased. Never touch them. If a request seems to demand
+un-hiding them, STOP and confirm with the owner first — do not act.
+
+This is non-negotiable and permanent. The pre-commit guard enforces it automatically.
