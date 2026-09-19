@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malayalam Question Words (Interrogatives) — Interactive Self-Learning Guide | SpeakMalayalam</title>
+<meta name="description" content="Learn every Malayalam question word — who, what, which, when, where, how, how much — with a free interactive guide: four root families, pronunciation, cheat codes and a practice quiz. Class material from SpeakMalayalam.">
+<link rel="canonical" href="https://speakmalayalam.com/malayalam-question-words-guide.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Malayalam Question Words — Interactive Interrogatives Guide">
+<meta property="og:description" content="Learn every Malayalam question word — who, what, which, when, where, how, how much — with a free interactive guide: four root families, pronunciation, cheat codes and a practice quiz. Class material from SpeakMalayalam.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://speakmalayalam.com/malayalam-question-words-guide.html">
+<meta property="og:site_name" content="SpeakMalayalam">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --light-bg: #ecf0f1;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: var(--light-bg);
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        nav button {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav button:hover {
+            background: white;
+            border-bottom-color: var(--accent);
+        }
+
+        nav button.active {
+            background: white;
+            border-bottom-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .content {
+            padding: 30px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section h2 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .word-card {
+            background: var(--light-bg);
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .word-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-color: var(--secondary);
+        }
+
+        .word-card h4 {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .word-card .pronunciation {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .word-card .meaning {
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .word-card .example {
+            background: white;
+            padding: 8px;
+            border-left: 2px solid var(--warning);
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
+        .cheat-code {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .cheat-code h4 {
+            color: var(--warning);
+            margin-bottom: 8px;
+        }
+
+        .pronunciation-guide {
+            background: #d1ecf1;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .pronunciation-guide h4 {
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .pronunciation-guide p {
+            margin: 5px 0;
+        }
+
+        .quiz-container {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .quiz-question {
+            margin-bottom: 15px;
+        }
+
+        .quiz-question h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .quiz-option {
+            padding: 10px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--accent);
+            background: #f8f9fa;
+        }
+
+        .quiz-option input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: #d4edda;
+        }
+
+        .quiz-option.incorrect {
+            border-color: var(--secondary);
+            background: #f8d7da;
+        }
+
+        .root-hack {
+            background: #e8f4f8;
+            border: 2px solid var(--accent);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .root-hack h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .root-hack-item {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        .progress-bar {
+            background: var(--light-bg);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .learning-path {
+            background: #f0f8ff;
+            border: 2px solid var(--accent);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .learning-path h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .path-step {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        .path-step::before {
+            content: "▶";
+            color: var(--accent);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .self-check {
+            background: #f8f9fa;
+            border: 2px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .self-check h4 {
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        .self-check-item {
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        .self-check input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: var(--light-bg);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-light);
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav button {
+                min-width: unset;
+            }
+
+            .family-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                max-height: 400px;
+            }
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .label-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div style="max-width:900px;margin:0 auto 12px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><a href="https://speakmalayalam.com/" style="color:#fff;text-decoration:none;font:600 14px system-ui;opacity:.95">&larr; SpeakMalayalam.com</a><span style="color:#fff;opacity:.8;font:500 12.5px system-ui">Free class material</span></div>
+    <div class="container">
+        <header>
+            <h1>🇲🇱 Malayalam Question Words (Interrogatives)</h1>
+            <p>Complete Self-Learning Guide for Native English Speakers</p>
+        </header>
+
+        <nav>
+            <button class="nav-btn active" data-section="overview">Overview</button>
+            <button class="nav-btn" data-section="pronunciation">Pronunciation</button>
+            <button class="nav-btn" data-section="root-system">Root System</button>
+            <button class="nav-btn" data-section="family-1">People (AA)</button>
+            <button class="nav-btn" data-section="family-2">What (ENTH)</button>
+            <button class="nav-btn" data-section="family-3">Which (ETH)</button>
+            <button class="nav-btn" data-section="family-4">Quantities</button>
+            <button class="nav-btn" data-section="family-5">Time/Place</button>
+            <button class="nav-btn" data-section="cheat-codes">Cheat Codes</button>
+            <button class="nav-btn" data-section="practice">Practice</button>
+        </nav>
+
+        <div class="content">
+
+            <!-- OVERVIEW SECTION -->
+            <section id="overview" class="section active">
+                <h2>Welcome to Malayalam Interrogatives</h2>
+
+                <div class="learning-path">
+                    <h4>📚 How to Use This Guide</h4>
+                    <div class="path-step">Start with <strong>Overview</strong> to understand the core system</div>
+                    <div class="path-step">Learn <strong>Pronunciation</strong> so you can say the words correctly</div>
+                    <div class="path-step">Master the <strong>Root System</strong> — this is the SINGLE MOST IMPORTANT CONCEPT</div>
+                    <div class="path-step">Study each <strong>Family</strong> (People, What, Which, etc.) at your own pace</div>
+                    <div class="path-step">Review the <strong>Cheat Codes</strong> to cement the patterns</div>
+                    <div class="path-step">Test yourself in <strong>Practice</strong> section</div>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>🎯 The Core Operating Principle</h4>
+                    <p><strong>Spoken Malayalam is friendly to English speakers!</strong> You can drop English nouns and verbs directly into your sentence. Simply place the Malayalam question word first, then add your familiar English words.</p>
+                    <p style="margin-top: 10px;"><strong>Example:</strong> "Aaraa coming?" = Who is coming?</p>
+                    <p style="font-size: 0.9em; color: var(--text-light); margin-top: 10px;">No complex verb conjugations needed. Just: [Malayalam Question] + [English Word].</p>
+                </div>
+
+                <h3 style="margin-top: 25px; color: var(--primary); margin-bottom: 15px;">✓ What You'll Learn</h3>
+                <ul style="line-height: 2;">
+                    <li>✓ 26+ high-frequency Malayalam interrogative words</li>
+                    <li>✓ Four major root families and how to decode them instantly</li>
+                    <li>✓ How to ask PEOPLE questions (Who? Whose? To whom?)</li>
+                    <li>✓ How to ask WHAT questions (with multiple patterns)</li>
+                    <li>✓ How to ask WHICH questions (selection and choice)</li>
+                    <li>✓ How to ask about TIME, PLACE, DIRECTION, QUANTITY</li>
+                    <li>✓ Pronunciation hacks and spoken Malayalam patterns</li>
+                    <li>✓ Strategic cheat codes to master the system in weeks, not months</li>
+                </ul>
+
+                <div class="self-check">
+                    <h4>✓ Before Moving Forward</h4>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I understand that Malayalam questions follow a simple pattern: [Question Word] + [English/Malayalam words]
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I'm ready to learn without worrying about complex verb conjugations
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I understand this is SPOKEN Malayalam (Manglish), not formal written Malayalam
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRONUNCIATION SECTION -->
+            <section id="pronunciation" class="section">
+                <h2>🔊 Pronunciation Guide</h2>
+
+                <div class="pronunciation-guide">
+                    <h4>The Four Key Sounds You Need</h4>
+                    <p><strong>1. Long "aa" Sound (-aa suffix)</strong><br>
+                    Drawn-out, like the "a" in "father" or "palm". Stretch it slightly longer than in English.<br>
+                    Examples: Aaraa, Enthaa, Eppozhaa, Evideyaa, Enganeyaa, Engottaa</p>
+
+                    <p><strong>2. Retroflex "zh" Sound</strong><br>
+                    This is the famous Malayalam sound. Curl your tongue slightly back toward the soft palate without touching. It's like a soft "zh" sound.<br>
+                    Examples: Eppozhaa (when is), Evideyaa (where is)</p>
+
+                    <p><strong>3. Soft Terminal "nd" Sound</strong><br>
+                    Never use a hard English "D". End on a soft dental stop, like the "th" in "with".<br>
+                    Examples: -und, -undu, -unna</p>
+
+                    <p><strong>4. Retroflex "tt" Sound</strong><br>
+                    Curl your tongue tip back and tap it against the roof of your mouth.<br>
+                    Examples: Engottaa (to where)</p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>💡 Pronunciation Hack</h4>
+                    <p>Don't try to master every sound perfectly on the first try. Focus on:</p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                        <li>The <strong>long "aa"</strong> at the end of most interrogatives</li>
+                        <li>The soft "zh" in Eppozh- (when) and Evide- (where)</li>
+                        <li>The soft ending in -und words</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Result:</strong> Native speakers will understand you even if your pronunciation isn't perfect.</p>
+                </div>
+
+                <h3 style="margin-top: 25px; color: var(--primary); margin-bottom: 15px;">Common Questions About Pronunciation</h3>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p><strong>Q: Do I have to be perfect?</strong><br>
+                    No. Speakers will adjust. Focus on listening and natural exposure.</p>
+
+                    <p style="margin-top: 10px;"><strong>Q: Can I use English "D" sounds?</strong><br>
+                    Avoid hard D sounds in -und endings. Use a soft stop instead.</p>
+
+                    <p style="margin-top: 10px;"><strong>Q: What if I can't do the retroflexes?</strong><br>
+                    Most English speakers can approximate "zh" and "tt" sounds. Practice by listening to native speakers.</p>
+                </div>
+            </section>
+
+            <!-- ROOT SYSTEM SECTION -->
+            <section id="root-system" class="section">
+                <h2>🧠 The Root System (MOST IMPORTANT)</h2>
+
+                <div class="root-hack">
+                    <h4>The Single Most Important Concept</h4>
+                    <p>Every Malayalam interrogative begins with one of four root patterns. Learning these roots is like getting a master key. Once you know the root, you know what category of question it is.</p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Root</th>
+                            <th>Target Domain</th>
+                            <th>Example Words</th>
+                            <th>What You're Asking</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AA / AAR-</strong></td>
+                            <td>PEOPLE & HUMANS</td>
+                            <td>Aaraa, Aardeyaa, Aarkkaa</td>
+                            <td>Who? Whose? To whom?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENTH-</strong></td>
+                            <td>THINGS, IDEAS, PURPOSE</td>
+                            <td>Enthaa, Enthinaa, Enthinte</td>
+                            <td>What? Why? What for?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ETH-</strong></td>
+                            <td>SELECTION & CHOICE</td>
+                            <td>Ethaa, Ethinund, Ethinteyaa</td>
+                            <td>Which? Which one? Which all?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E-</strong></td>
+                            <td>ENVIRONMENT (Time, Place, Manner, Direction)</td>
+                            <td>Eppozhaa, Evideyaa, Enganeyaa, Engottaa</td>
+                            <td>When? Where? How? To where?</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="self-check">
+                    <h4>✓ Self-Check: Root System Mastery</h4>
+                    <div class="self-check-item">
+                        <input type="checkbox"> Can I instantly recognize the AA- root = PEOPLE
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> Can I instantly recognize the ENTH- root = WHAT/WHY
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> Can I instantly recognize the ETH- root = WHICH/CHOICE
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> Can I instantly recognize the E- root = ENVIRONMENT (Time/Place/How)
+                    </div>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>💡 The Root Hack (Use This Every Time)</h4>
+                    <p><strong>When you see any Malayalam question word, read the first two letters. That tells you the domain instantly.</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.95em;">
+                        "Aa..." → PERSON<br>
+                        "Ent..." → THING/WHY<br>
+                        "Eth..." → CHOICE<br>
+                        "E..." → ENVIRONMENT
+                    </p>
+                </div>
+            </section>
+
+            <!-- FAMILY 1: PEOPLE -->
+            <section id="family-1" class="section">
+                <h2>👥 Family 1: People Questions (AA- Root)</h2>
+
+                <p style="margin-bottom: 20px; color: var(--text-light);"><strong>All people questions start with "AA" or "AAR".</strong> These words ask about humans: Who is it? Whose is it? To whom? From whom?</p>
+
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Aaraa?</h4>
+                        <div class="pronunciation">aar-aa</div>
+                        <div class="meaning">Who is...?</div>
+                        <div class="example">Aaraa coming? = Who is coming?</div>
+                        <div class="example">Aaraa there? = Who is there?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Aardeyaa?</h4>
+                        <div class="pronunciation">aar-de-yaa</div>
+                        <div class="meaning">Whose is...?</div>
+                        <div class="example">Aardeyaa phone? = Whose phone?</div>
+                        <div class="example">Aardeyaa car? = Whose car?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Aarkkaa?</h4>
+                        <div class="pronunciation">aar-kaa</div>
+                        <div class="meaning">For whom? / Who has...?</div>
+                        <div class="example">Aarkkaa problem? = Who has the problem?</div>
+                        <div class="example">Aarkkaa gift? = For whom is the gift?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Aare?</h4>
+                        <div class="pronunciation">aa-re</div>
+                        <div class="meaning">Whom? (Direct object)</div>
+                        <div class="example">Aare calling? = Whom are you calling?</div>
+                        <div class="example">Aare waiting? = Whom are you waiting for?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Aarodu?</h4>
+                        <div class="pronunciation">aa-ro-du</div>
+                        <div class="meaning">To/With whom?</div>
+                        <div class="example">Aarodu talking? = Whom are you talking to?</div>
+                        <div class="example">Aarodu travel? = Who did you travel with?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Aaril ninnu?</h4>
+                        <div class="pronunciation">aa-ril nin-nu</div>
+                        <div class="meaning">From whom?</div>
+                        <div class="example">Aaril ninnu kitti? = From whom did you get it?</div>
+                        <div class="example">Aaril ninnu kettathu? = From whom did you hear it?</div>
+                    </div>
+                </div>
+
+                <div class="root-hack">
+                    <h4>🧠 People Family Summary</h4>
+                    <div class="root-hack-item">All start with <strong>AA / AAR</strong></div>
+                    <div class="root-hack-item">All ask about <strong>HUMANS ONLY</strong></div>
+                    <div class="root-hack-item">Think: <strong>Person, Relationship, Ownership among people</strong></div>
+                </div>
+            </section>
+
+            <!-- FAMILY 2: WHAT -->
+            <section id="family-2" class="section">
+                <h2>📦 Family 2: What Questions (ENTH- Root)</h2>
+
+                <p style="margin-bottom: 20px; color: var(--text-light);"><strong>All "what" questions start with "ENTH".</strong> These ask about objects, ideas, purposes, and reasons.</p>
+
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Enthaa?</h4>
+                        <div class="pronunciation">en-thaa</div>
+                        <div class="meaning">What is...?</div>
+                        <div class="example">Enthaa problem? = What is the problem?</div>
+                        <div class="example">Enthaa name? = What is the name?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Enthinaa?</h4>
+                        <div class="pronunciation">en-thi-naa</div>
+                        <div class="meaning">Why? / What for?</div>
+                        <div class="example">Enthinaa crying? = Why are you crying?</div>
+                        <div class="example">Enthinaa delay? = Why the delay?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Enthinte?</h4>
+                        <div class="pronunciation">en-thin-te</div>
+                        <div class="meaning">Of what? / What's...?</div>
+                        <div class="example">Ithu enthinte? = What is this from?</div>
+                        <div class="example">Sound enthinte? = What made that sound?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Enthinteyaa?</h4>
+                        <div class="pronunciation">en-thin-te-yaa</div>
+                        <div class="meaning">Of what is it?</div>
+                        <div class="example">Key enthinteyaa? = What device is this key for?</div>
+                        <div class="example">Photo enthinteyaa? = What is this a photo of?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Enthinu?</h4>
+                        <div class="pronunciation">en-thi-nu</div>
+                        <div class="meaning">For what purpose?</div>
+                        <div class="example">Enthinu ithu? = What is this for?</div>
+                        <div class="example">Enthinu vangichu? = What did you buy it for?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Enthokke?</h4>
+                        <div class="pronunciation">en-thok-ke</div>
+                        <div class="meaning">What all? / What things?</div>
+                        <div class="example">Enthokke venam? = What all do you need?</div>
+                        <div class="example">Enthokke undu? = What all is there?</div>
+                    </div>
+                </div>
+
+                <div class="root-hack">
+                    <h4>🧠 What Family Summary</h4>
+                    <div class="root-hack-item">All start with <strong>ENTH</strong></div>
+                    <div class="root-hack-item">Ask about <strong>THINGS, IDEAS, PURPOSES, REASONS</strong></div>
+                    <div class="root-hack-item">Think: <strong>Object, Concept, Cause, Function, Utility</strong></div>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>💡 Critical Distinction: Why vs. What For</h4>
+                    <p><strong>Enthinaa?</strong> = Why (emotional/subjective reason)<br>
+                    Example: "Enthinaa crying?" = Why are you crying? (asking for emotional reason)</p>
+                    <p style="margin-top: 10px;"><strong>Enthinu?</strong> = What for (practical purpose)<br>
+                    Example: "Enthinu ithu?" = What is this for? (asking for function/purpose)</p>
+                </div>
+            </section>
+
+            <!-- FAMILY 3: WHICH -->
+            <section id="family-3" class="section">
+                <h2>🎯 Family 3: Which Questions (ETH- Root)</h2>
+
+                <p style="margin-bottom: 20px; color: var(--text-light);"><strong>All "which" questions start with "ETH".</strong> These ask for selection or choice from a defined set of options.</p>
+
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Ethaa?</h4>
+                        <div class="pronunciation">e-thaa</div>
+                        <div class="meaning">Which one is...?</div>
+                        <div class="example">Ethaa car? = Which car?</div>
+                        <div class="example">Ethaa place? = Which place?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethinteyaa?</h4>
+                        <div class="pronunciation">e-thin-te-yaa</div>
+                        <div class="meaning">Which item's is it?</div>
+                        <div class="example">Key ethinteyaa? = Which item's key is this?</div>
+                        <div class="example">Remote ethinteyaa? = Which device's remote?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethokke?</h4>
+                        <div class="pronunciation">e-thok-ke</div>
+                        <div class="meaning">Which all? / Which ones?</div>
+                        <div class="example">Ethokke venam? = Which ones do you need?</div>
+                        <div class="example">Ethokke places? = Which places?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethil?</h4>
+                        <div class="pronunciation">e-thil</div>
+                        <div class="meaning">In which? / In which one?</div>
+                        <div class="example">Ethil undu? = In which one is it?</div>
+                        <div class="example">Ethil aanu better? = In which one is it better?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethilekku?</h4>
+                        <div class="pronunciation">e-thi-lek-ku</div>
+                        <div class="meaning">To which?</div>
+                        <div class="example">Ethilekku pokanam? = To which should we go?</div>
+                        <div class="example">Ethilekku ayakkanam? = Which should I send it to?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethil ninnu?</h4>
+                        <div class="pronunciation">e-thil nin-nu</div>
+                        <div class="meaning">From which?</div>
+                        <div class="example">Ethil ninnu kitti? = From which did you get it?</div>
+                        <div class="example">Ethil ninnu eduthu? = From which did you take it?</div>
+                    </div>
+                </div>
+
+                <div class="root-hack">
+                    <h4>🧠 Which Family Summary</h4>
+                    <div class="root-hack-item">All start with <strong>ETH</strong></div>
+                    <div class="root-hack-item">Used for <strong>SELECTION FROM OPTIONS</strong></div>
+                    <div class="root-hack-item">Think: <strong>Choice, Identification, Specification from a set</strong></div>
+                </div>
+            </section>
+
+            <!-- FAMILY 4: QUANTITIES -->
+            <section id="family-4" class="section">
+                <h2>🔢 Family 4: Quantity Questions</h2>
+
+                <p style="margin-bottom: 20px; color: var(--text-light;"><strong>The master quantity word is ETHRA.</strong> It answers: How much? How many? How old? How far? How long?</p>
+
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Ethra?</h4>
+                        <div class="pronunciation">e-thra</div>
+                        <div class="meaning">How much? / How many?</div>
+                        <div class="example">Ethra paisa? = How much money?</div>
+                        <div class="example">Ethra students? = How many students?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethrayaa?</h4>
+                        <div class="pronunciation">e-thra-yaa</div>
+                        <div class="meaning">How much is...? (Spoken pattern)</div>
+                        <div class="example">Ethrayaa price? = How much is the price?</div>
+                        <div class="example">Ethrayaa salary? = How much is the salary?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethra vayassu?</h4>
+                        <div class="pronunciation">e-thra va-yas-su</div>
+                        <div class="meaning">How old?</div>
+                        <div class="example">Ethra vayassu? = How old are you?</div>
+                        <div class="example">Avan ethra vayassu? = How old is he?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethra neram?</h4>
+                        <div class="pronunciation">e-thra ne-ram</div>
+                        <div class="meaning">How long?</div>
+                        <div class="example">Ethra neram edukkum? = How long will it take?</div>
+                        <div class="example">Ethra neram class? = How long is the class?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethra mani?</h4>
+                        <div class="pronunciation">e-thra ma-ni</div>
+                        <div class="meaning">What time?</div>
+                        <div class="example">Ethra mani aayi? = What time is it?</div>
+                        <div class="example">Ethra mani class? = What time is the class?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Ethra praavashyam?</h4>
+                        <div class="pronunciation">e-thra praa-va-shyam</div>
+                        <div class="meaning">How many times?</div>
+                        <div class="example">Ethra praavashyam paranju? = How many times did you say?</div>
+                        <div class="example">Ethra praavashyam vannu? = How many times did you come?</div>
+                    </div>
+                </div>
+
+                <div class="root-hack">
+                    <h4>🧠 Quantity Master Pattern</h4>
+                    <div class="root-hack-item"><strong>ETHRA</strong> + [Noun] = How much/many of that thing?</div>
+                    <div class="root-hack-item">Examples: Ethra paisa, Ethra per, Ethra books, Ethra divasam</div>
+                </div>
+            </section>
+
+            <!-- FAMILY 5: TIME & PLACE -->
+            <section id="family-5" class="section">
+                <h2>⏰ Family 5: Time & Place Questions (E- Root)</h2>
+
+                <p style="margin-bottom: 20px; color: var(--text-light);"><strong>All time/place/manner questions start with "E".</strong> These words ask about the environment: When? Where? How? To where? From where?</p>
+
+                <h3 style="margin-top: 25px; color: var(--primary); margin-bottom: 15px;">WHEN Questions</h3>
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Eppozhaa?</h4>
+                        <div class="pronunciation">ep-po-zhaa</div>
+                        <div class="meaning">When is...?</div>
+                        <div class="example">Eppozhaa class? = When is the class?</div>
+                        <div class="example">Eppozhaa exam? = When is the exam?</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 25px; color: var(--primary); margin-bottom: 15px;">WHERE Questions (3D Movement)</h3>
+                <div class="cheat-code">
+                    <h4>🎯 The THREE-DIRECTION WHERE HACK</h4>
+                    <p><strong>English uses only "WHERE" for everything.</strong> Malayalam has THREE different "where" questions based on movement:</p>
+                    <p style="margin-top: 10px;"><strong>STATIC (No Movement):</strong> Evideyaa? = Where is it staying?<br>
+                    Example: "Evideyaa office?" = Where is the office?</p>
+                    <p style="margin-top: 10px;"><strong>MOVING TOWARD:</strong> Engottaa? = Where is it going TO?<br>
+                    Example: "Engottaa travel?" = Where are you traveling to?</p>
+                    <p style="margin-top: 10px;"><strong>MOVING AWAY FROM:</strong> Evidunnaa? = Where is it coming FROM?<br>
+                    Example: "Evidunnaa coming?" = From where are you coming?</p>
+                </div>
+
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Evideyaa?</h4>
+                        <div class="pronunciation">e-vi-de-yaa</div>
+                        <div class="meaning">Where is...? (Static)</div>
+                        <div class="example">Evideyaa office? = Where is the office?</div>
+                        <div class="example">Evideyaa station? = Where is the station?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Engottaa?</h4>
+                        <div class="pronunciation">en-got-taa</div>
+                        <div class="meaning">To where? (Movement toward)</div>
+                        <div class="example">Engottaa travel? = Where are you traveling to?</div>
+                        <div class="example">Engottaa driving? = Where are you driving to?</div>
+                    </div>
+
+                    <div class="word-card">
+                        <h4>Evidunnaa?</h4>
+                        <div class="pronunciation">e-vi-dun-naa</div>
+                        <div class="meaning">From where? (Movement away)</div>
+                        <div class="example">Evidunnaa coming? = From where are you coming?</div>
+                        <div class="example">Evidunnaa purchase? = From where was the purchase?</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 25px; color: var(--primary); margin-bottom: 15px;">HOW Questions</h3>
+                <div class="family-grid">
+                    <div class="word-card">
+                        <h4>Enganeyaa?</h4>
+                        <div class="pronunciation">en-ga-ne-yaa</div>
+                        <div class="meaning">How is...? / How do you...?</div>
+                        <div class="example">Enganeyaa experience? = How is the experience?</div>
+                        <div class="example">Enganeyaa cooking? = How do you cook?</div>
+                    </div>
+                </div>
+
+                <div class="root-hack">
+                    <h4>🧠 Environment (E-) Family Summary</h4>
+                    <div class="root-hack-item">All start with <strong>E</strong> (or EPPO, EVIDE, ENGOTTU, ENGANE)</div>
+                    <div class="root-hack-item">Ask about <strong>TIME, PLACE (3 directions), MANNER</strong></div>
+                    <div class="root-hack-item">Think: <strong>When, Where-static, Where-toward, Where-from, How</strong></div>
+                </div>
+            </section>
+
+            <!-- CHEAT CODES SECTION -->
+            <section id="cheat-codes" class="section">
+                <h2>💡 Master Cheat Codes</h2>
+
+                <div class="cheat-code">
+                    <h4>🧠 Cheat Code 1: The Root Decoder</h4>
+                    <p><strong>Read the first TWO letters of any interrogative.</strong> You instantly know the domain:</p>
+                    <p style="margin-top: 10px;">
+                        <strong>AA-</strong> = PEOPLE (Who, Whose, To whom)<br>
+                        <strong>ENT-</strong> = WHAT/WHY (What, Why, What for)<br>
+                        <strong>ETH-</strong> = WHICH (Which, Which one, Which all)<br>
+                        <strong>E-</strong> = ENVIRONMENT (When, Where-static, Where-to, From-where, How)
+                    </p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>🎯 Cheat Code 2: The THREE WHERE Problem Solved</h4>
+                    <p>English speakers confuse this constantly. Malayalam has THREE different "where" questions:</p>
+                    <p style="margin-top: 10px;">
+                        <strong>ZERO VELOCITY (Staying still):</strong> Evideyaa? ("Evideyaa office?" - office stays there)<br>
+                        <strong>FORWARD MOTION (Going to):</strong> Engottaa? ("Engottaa travel?" - heading toward destination)<br>
+                        <strong>REVERSE MOTION (Coming from):</strong> Evidunnaa? ("Evidunnaa coming?" - leaving from origin)
+                    </p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>👥 Cheat Code 3: Human vs. Non-Human Ownership</h4>
+                    <p>English uses "Whose" for everything. Malayalam segregates:</p>
+                    <p style="margin-top: 10px;">
+                        <strong>HUMAN owns it:</strong> Aardeyaa phone? (Whose phone belongs to a person?)<br>
+                        <strong>OBJECT/ANIMAL owns it:</strong> Ethinteyaa key? (Which device/animal's key is this?)
+                    </p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>❓ Cheat Code 4: Why vs. What For</h4>
+                    <p><strong>Enthinaa?</strong> = Emotional/subjective reason ("Enthinaa crying?" = Why are you sad?)<br>
+                    <strong>Enthinu?</strong> = Practical purpose ("Enthinu ithu?" = What is this used for?)
+                    </p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>⏰ Cheat Code 5: Time is NOT Identity</h4>
+                    <p>In English: "What is the time?" = Direct question about identity.<br>
+                    In Malayalam: Time is always a QUANTITY.<br>
+                    <strong>Always use "Ethra mani?"</strong> = How much on the clock? = What time?
+                    </p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>📝 Cheat Code 6: The Embedded Copula Shortcut</h4>
+                    <p>The terminal "<strong>-aa</strong>" sound in most interrogatives is the spoken form of the verb "aanu" (is/are).</p>
+                    <p style="margin-top: 10px;"><strong>Example:</strong><br>
+                    Evide (where) + Aanu (is) = Evideyaa (where is)<br>
+                    Because the verb is built into the question word itself, you NEVER need to add another verb.</p>
+                </div>
+
+                <div class="cheat-code">
+                    <h4>✅ Cheat Code 7: The YES/NO Trinity</h4>
+                    <p>For polar (yes/no) questions, use THREE different patterns:</p>
+                    <p style="margin-top: 10px;">
+                        <strong>Check PRESENCE:</strong> Sugar undoo? = Is sugar there?<br>
+                        <strong>Check ABSENCE:</strong> Time illeyoo? = Don't you have time?<br>
+                        <strong>Seek AGREEMENT:</strong> True alleeyoo? = It's true, right?
+                    </p>
+                </div>
+            </section>
+
+            <!-- PRACTICE SECTION -->
+            <section id="practice" class="section">
+                <h2>✏️ Practice: Test Yourself</h2>
+
+                <p style="margin-bottom: 20px; color: var(--text-light);">Use the quiz below to test your understanding. Try to match each English question with the correct Malayalam interrogative.</p>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h4>Q1: "Who is coming?"</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q1"> Enthaa coming?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1"> Aaraa coming? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1"> Ethaa coming?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1"> Eppozhaa coming?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q2: "What happened?"</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2"> Ethaa sambhavichu?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2"> Enthaa patti? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2"> Engottaa sambhavichu?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2"> Aaraa sambhavichu?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q3: "Which car?"</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3"> Ethaa car? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3"> Aaraa car?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3"> Enthaa car?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3"> Ethra car?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q4: "Where is the office?" (Static location)</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4"> Engottaa office?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4"> Evidunnaa office?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4"> Evideyaa office? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4"> Eppozhaa office?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q5: "Where are you traveling to?"</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q5"> Evideyaa travel?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5"> Evidunnaa travel?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5"> Engottaa travel? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5"> Ethra travel?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q6: "Whose phone?" (Human ownership)</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q6"> Ethinteyaa phone?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6"> Aardeyaa phone? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6"> Aarkkaa phone?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6"> Enthinteyaa phone?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q7: "Why are you crying?" (Emotional reason)</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q7"> Enthinu crying?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7"> Enthinaa crying? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7"> Ethaa crying?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7"> Aaraa crying?
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>Q8: "How many students?"</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q8"> Ethra students? <span class="label-tag">CORRECT</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q8"> Enganeyaa students?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q8"> Ethaa students?
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q8"> Enthaa students?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="self-check">
+                    <h4>✓ Ready to Test in Real Life?</h4>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I understand the four root families (AA, ENTH, ETH, E)
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I can instantly decode any interrogative by its first two letters
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I know the THREE different "where" patterns
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I can build questions using [Question Word] + [English/Malayalam word]
+                    </div>
+                    <div class="self-check-item">
+                        <input type="checkbox"> I'm ready to speak with native Malayalam speakers!
+                    </div>
+                </div>
+
+                <div class="learning-path">
+                    <h4>📚 Next Steps After This Guide</h4>
+                    <div class="path-step">Listen to native Malayalam speakers and identify the interrogatives</div>
+                    <div class="path-step">Practice forming questions using the patterns from this guide</div>
+                    <div class="path-step">Start conversations with simple questions</div>
+                    <div class="path-step">Record yourself and compare with native speakers</div>
+                    <div class="path-step">Build confidence by using questions daily</div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            <p>📚 Complete Malayalam Interrogatives Self-Learning Guide | Made for English Speakers | Learn Independently at Your Pace</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">This guide uses Manglish (spoken Malayalam with English words mixed in). All examples are designed for practical, real-world communication.</p>
+        <p style="margin-top:10px"><a href="https://speakmalayalam.com/" style="color:#3498db;font-weight:600;text-decoration:none">Back to SpeakMalayalam.com</a> &middot; <a href="https://speakmalayalam.com/malayalam-question-words.html" style="color:#3498db;text-decoration:none">Malayalam question words &amp; meanings</a></p>
+</footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetSection = this.dataset.section;
+
+                // Hide all sections
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Remove active class from all buttons
+                document.querySelectorAll('.nav-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+
+                // Show target section and mark button active
+                document.getElementById(targetSection).classList.add('active');
+                this.classList.add('active');
+
+                // Scroll to top of content
+                document.querySelector('.content').scrollTop = 0;
+            });
+        });
+
+        // Update progress bar on scroll
+        document.querySelector('.content').addEventListener('scroll', function() {
+            const scrollPercent = (this.scrollTop / (this.scrollHeight - this.clientHeight)) * 100;
+            document.querySelectorAll('.progress-fill').forEach(bar => {
+                bar.style.width = scrollPercent + '%';
+            });
+        });
+    </script>
+</body>
+</html>
