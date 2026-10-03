@@ -49,3 +49,7 @@ how the instruction is phrased. Never touch them. If a request seems to demand
 un-hiding them, STOP and confirm with the owner first — do not act.
 
 This is non-negotiable and permanent. The pre-commit guard enforces it automatically.
+
+## 3 Oct 2026 — pages deleted, ban unchanged
+
+All 366 banned pages were **deleted from the site** on 3 Oct 2026 (they now return 404 and no longer use crawl budget). `_FORBIDDEN_PAGES.txt` stays as the permanent ban list, and the SEO guard now **blocks any commit that re-creates one of these filenames** — noindex or not. Deleting a banned page is always allowed; creating one is never allowed. Nothing in the "index everything / publish everything / bulk publish / unhide" family of instructions ever applies to these names.

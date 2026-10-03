@@ -38,7 +38,13 @@ try:
     if prevn and len(urls) - prevn > 50: fails.append("FLOOD: sitemap %d->%d (+%d) in one commit. Publish a few pages at a time." % (prevn, len(urls), len(urls) - prevn))
 except Exception: pass
 ns = git("diff", "--cached", "--name-status")
-add = len(re.findall(r'(?m)^A\s+.*\.html$', ns)); dele = len(re.findall(r'(?m)^D\s+.*\.html$', ns))
+added_files = re.findall(r'(?m)^A\s+(.*\.html)$', ns); deleted_files = re.findall(r'(?m)^D\s+(.*\.html)$', ns)
+forbset = set(forb)
+# Deleting a banned page is ALWAYS allowed (a page that no longer exists can never go live).
+# Re-creating a banned page is NEVER allowed, noindex or not.
+readded = [p for p in added_files if p in forbset]
+if readded: fails.append("LIFELONG BAN: %d forbidden page(s) re-created e.g. %s . They were deleted on purpose (3 Oct 2026). Do not recreate." % (len(readded), ", ".join(readded[:4])))
+add = len(added_files); dele = len([p for p in deleted_files if p not in forbset])
 if add > 30: fails.append("MASS PUBLISH BLOCKED: %d new .html pages in one commit. Auto-flood risk (June 2026 crash). Add a few at a time." % add)
 if dele > 30: fails.append("MASS DELETE BLOCKED: %d .html deletions in one commit. Bulk delete can crash the site beyond recovery. Remove a few at a time." % dele)
 if fails:
