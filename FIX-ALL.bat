@@ -7,9 +7,17 @@ echo ==================================================
 echo.
 
 REM --- 1. clear any stale git lock that can block publishing ---
-if exist ".git\index.lock" (
-  echo [1/5] Clearing stale git lock...
-  del /f /q ".git\index.lock"
+REM     (index.lock, HEAD.lock and objects\maintenance.lock - a crashed
+REM      git run leaves these behind and they block EVERY commit)
+set "CLEARED="
+for %%L in (".git\index.lock" ".git\HEAD.lock" ".git\objects\maintenance.lock") do (
+  if exist "%%~L" (
+    del /f /q "%%~L"
+    set "CLEARED=1"
+  )
+)
+if defined CLEARED (
+  echo [1/5] Cleared stale git lock file^(s^). OK.
 ) else (
   echo [1/5] No stale git lock. OK.
 )
