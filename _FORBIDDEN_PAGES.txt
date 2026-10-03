@@ -368,3 +368,9 @@ spoken-malayalam-pattern-practice-builds-confidence.html
 still-learning-malayalam-conversation.html
 tea-shop-malayalam-conversation.html
 weather-small-talk-malayalam-conversation.html
+# Added 2026-10-03: last five template-pattern pages (same June 2026 template, ~540 words each)
+learn-malayalam-mixed-language-homes-without-overwhelm.html
+malayalam-course-guide-for-calling-grandparents-what-to-learn.html
+malayalam-tutor-help-for-adult-spoken-practice-when-coaching-matters.html
+malayalam-for-beginners-future-tense-basics-step-by-step.html
+malayalam-course-guide-for-self-paced-versus-tutor-supported-learning-what-to-learn.html
