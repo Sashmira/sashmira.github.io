@@ -90,8 +90,8 @@
     done.style.display = 'block';
     done.innerHTML = 'You scored ' + correct + '/' + total + '. '
       + (first ? '🎉 +' + (correct * 10) + ' XP banked!' : 'Practised again — nice!')
-      + '<br><a href="/my-progress.html" style="color:' + GOLD + ';font-weight:800">See your progress →</a> &nbsp; '
-      + '<a href="/malayalam-practice.html" style="color:#fff;text-decoration:underline">More quizzes →</a>';
+      + '<br><a href="/malayalam-daily-practice.html" style="color:' + GOLD + ';font-weight:800">Keep your streak going →</a> &nbsp; '
+      + '<a href="/malayalam-listening-quiz.html" style="color:#fff;text-decoration:underline">More quizzes →</a>';
   }
   [].slice.call(box.querySelectorAll('.rq-item')).forEach(function (item) {
     var qq = questions[+item.getAttribute('data-i')];

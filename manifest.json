@@ -38,8 +38,8 @@
     {
       "name": "Practice Malayalam",
       "short_name": "Practice",
-      "description": "Open the Malayalam practice quiz.",
-      "url": "/malayalam-practice.html?source=pwa_shortcut",
+      "description": "Open daily Malayalam practice.",
+      "url": "/malayalam-daily-practice.html?source=pwa_shortcut",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     },
     {

@@ -1,16 +1,12 @@
-const CACHE = 'sm-v2';
+const CACHE = 'sm-v3';
 const CORE = [
   '/',
   '/blog.html',
-  '/speak-malayalam-app.html',
-  '/offline.html',
   '/malayalam-lessons.html',
-  '/malayalam-practice.html',
   '/malayalam-phrasebook.html',
   '/learn-malayalam-30-days.html',
   '/malayalam-level-test.html',
   '/podcast.html',
-  '/ai-malayalam-tutor.html',
   '/malayalam-tutor.html',
   '/malayalam-books.html',
   '/icon-192.png',
@@ -59,6 +55,6 @@ self.addEventListener('fetch', event => {
         }
         return response;
       })
-      .catch(() => caches.match(event.request).then(hit => hit || caches.match('/offline.html') || caches.match('/')))
+      .catch(() => caches.match(event.request).then(hit => hit || caches.match('/')))
   );
 });
