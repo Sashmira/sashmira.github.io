@@ -11,7 +11,7 @@
   "r": "Njaan ninne snehikkunnu",
   "e": "I love you",
   "a": "/audio/njaan-ninne-snehikkunnu.mp3",
-  "u": "/how-to-say-i-love-you-in-malayalam.html"
+  "u": "/malayalam-love-phrases.html#i-love-you"
  },
  {
   "ml": "സുഖമാണോ?",
@@ -25,28 +25,28 @@
   "r": "Namaskaram",
   "e": "Hello / greetings",
   "a": "/audio/namaskaram.mp3",
-  "u": "/how-to-say-hello-in-malayalam.html"
+  "u": "/malayalam-greetings.html#hello"
  },
  {
   "ml": "ജന്മദിനാശംസകൾ!",
   "r": "Janmadinaashamsakal!",
   "e": "Happy birthday!",
   "a": "/audio/janmadinashamsakal.mp3",
-  "u": "/how-to-say-happy-birthday-in-malayalam.html"
+  "u": "/malayalam-festival-wishes.html#birthday"
  },
  {
   "ml": "വെള്ളം",
   "r": "Vellam",
   "e": "Water",
   "a": "/audio/vellam-venam.mp3",
-  "u": "/how-to-say-water-in-malayalam.html"
+  "u": "/malayalam-food-words.html#water"
  },
  {
   "ml": "എനിക്ക് വിശക്കുന്നു",
   "r": "Enikku vishakkunnu",
   "e": "I'm hungry",
   "a": "/audio/vishakkunnu.mp3",
-  "u": "/how-to-say-im-hungry-in-malayalam.html"
+  "u": "/malayalam-food-words.html#hungry"
  },
  {
   "ml": "ഓണാശംസകൾ!",
@@ -60,21 +60,21 @@
   "r": "Ente priye",
   "e": "My dear / my love",
   "a": "/audio/ente-priye.mp3",
-  "u": "/how-to-say-my-love-in-malayalam.html"
+  "u": "/malayalam-love-phrases.html#my-love"
  },
  {
   "ml": "പിന്നെ കാണാം",
   "r": "Pinne kaanaam",
   "e": "See you later",
   "a": "/audio/pinne-kaanaam.mp3",
-  "u": "/how-to-say-goodbye-in-malayalam.html"
+  "u": "/malayalam-greetings.html#goodbye"
  },
  {
   "ml": "ശരി",
   "r": "Sheri",
   "e": "Okay / alright",
   "a": "/audio/sheri-onnum-illa.mp3",
-  "u": "/how-to-say-okay-in-malayalam.html"
+  "u": "/malayalam-everyday-replies.html#okay"
  },
  {
   "ml": "എവിടെയാ?",
@@ -88,21 +88,21 @@
   "r": "Ithiri pathukke parayaamo?",
   "e": "Can you speak a little slowly?",
   "a": "/audio/pathukke-parayu.mp3",
-  "u": "/how-to-say-please-speak-slowly-in-malayalam.html"
+  "u": "/malayalam-travel-phrases.html#getting-by"
  },
  {
   "ml": "ഒന്ന് സഹായിക്കാമോ?",
   "r": "Onnu sahaayikkaamo?",
   "e": "Can you help me?",
   "a": "/audio/sahayikkamo.mp3",
-  "u": "/how-to-say-can-you-help-me-in-malayalam.html"
+  "u": "/malayalam-travel-phrases.html#help"
  },
  {
   "ml": "നല്ല രുചി!",
   "r": "Nalla ruchi!",
   "e": "It's really tasty!",
   "a": "/audio/nalla-ruchi.mp3",
-  "u": "/how-to-say-its-delicious-in-malayalam.html"
+  "u": "/malayalam-food-words.html#delicious"
  },
  {
   "ml": "ഒന്ന്, രണ്ട്, മൂന്ന്...",
@@ -116,56 +116,56 @@
   "r": "Ithethrayaa?",
   "e": "How much is this?",
   "a": "/audio/vila-kurayumo.mp3",
-  "u": "/how-to-say-how-much-is-this-in-malayalam.html"
+  "u": "/malayalam-shopping-phrases.html#how-much"
  },
  {
   "ml": "എനിക്ക് സുഖമില്ല",
   "r": "Enikku sukhamilla",
   "e": "I'm not feeling well",
   "a": "/audio/enikku-sugamilla.mp3",
-  "u": "/how-to-say-im-not-feeling-well-in-malayalam.html"
+  "u": "/malayalam-health-phrases.html#not-well"
  },
  {
   "ml": "അമ്മ · അച്ഛൻ",
   "r": "Amma · Achan",
   "e": "Mother · Father",
   "a": "/audio/amma.mp3",
-  "u": "/how-to-say-mother-and-father-in-malayalam.html"
+  "u": "/malayalam-family-words.html#core-family"
  },
  {
   "ml": "അടിപൊളി!",
   "r": "Adipoli!",
   "e": "Awesome!",
   "a": "/audio/adipoli-vere-level.mp3",
-  "u": "/how-to-say-awesome-in-malayalam.html"
+  "u": "/malayalam-everyday-replies.html#awesome"
  },
  {
   "ml": "ചേട്ടാ, ഒരു ചായ താ",
   "r": "Chetta, oru chaaya thaa",
   "e": "Brother, one tea please",
   "a": "/audio/chetta-oru-chaaya.mp3",
-  "u": "/how-to-order-tea-in-malayalam.html"
+  "u": "/malayalam-food-words.html#ordering-tea"
  },
  {
   "ml": "ഇത് എന്താ?",
   "r": "Ithu enthaa?",
   "e": "What is this?",
   "a": "/audio/ithu-enthaa.mp3",
-  "u": "/how-to-say-what-is-this-in-malayalam.html"
+  "u": "/malayalam-question-words.html#what"
  },
  {
   "ml": "നീ എവിടെയാ?",
   "r": "Nee evideyaa?",
   "e": "Where are you?",
   "a": "/audio/nee-evideyaa.mp3",
-  "u": "/how-to-say-where-are-you-in-malayalam.html"
+  "u": "/malayalam-question-words.html#where"
  },
  {
   "ml": "ചോറ് കഴിച്ചോ?",
   "r": "Choru kazhicho?",
   "e": "Have you eaten? (lit. did you eat rice?)",
   "a": "/audio/mole-choru-kazhicho.mp3",
-  "u": "/how-to-say-have-you-eaten-in-malayalam.html"
+  "u": "/malayalam-food-words.html#have-you-eaten"
  },
  {
   "ml": "ഞാൻ നിന്നെ ഓർക്കുന്നു",
@@ -179,7 +179,7 @@
   "r": "Athu aaraa?",
   "e": "Who is that?",
   "a": "/audio/athu-aaraa.mp3",
-  "u": "/how-to-say-who-is-that-in-malayalam.html"
+  "u": "/malayalam-question-words.html#who"
  },
  {
   "ml": "എരിവ് വേണ്ട",
@@ -193,14 +193,14 @@
   "r": "Machaane!",
   "e": "Buddy! / Bro!",
   "a": "/audio/machane-sukhamaano.mp3",
-  "u": "/how-to-say-buddy-in-malayalam.html"
+  "u": "/malayalam-family-words.html#friends"
  },
  {
   "ml": "ഞാൻ വീട്ടിലാ",
   "r": "Njaan veettilaa",
   "e": "I'm at home",
   "a": "/audio/njaan-veettil-aanu.mp3",
-  "u": "/how-to-say-im-at-home-in-malayalam.html"
+  "u": "/malayalam-home-phrases.html#where-are-you"
  },
  {
   "ml": "സുഖം!",
@@ -214,7 +214,7 @@
   "r": "Bill tharumo?",
   "e": "Can I have the bill?",
   "a": "/audio/bill-tharumo.mp3",
-  "u": "/how-to-ask-for-the-bill-in-malayalam.html"
+  "u": "/malayalam-shopping-phrases.html#bill"
  },
  {
   "ml": "വേറെ കളർ ഉണ്ടോ?",
@@ -235,7 +235,7 @@
   "r": "Enikku ninne ishtamaanu",
   "e": "I like you / I'm fond of you",
   "a": "/audio/enikku-ninne-ishtamaanu.mp3",
-  "u": "/how-to-say-i-like-you-in-malayalam.html"
+  "u": "/malayalam-love-phrases.html#i-like-you"
  },
  {
   "ml": "എത്ര ദൂരം ഉണ്ട്?",
@@ -249,7 +249,7 @@
   "r": "Enikku ariyilla",
   "e": "I don't know",
   "a": "/audio/ariyilla-veendum.mp3",
-  "u": "/how-to-say-i-dont-know-in-malayalam.html"
+  "u": "/malayalam-everyday-replies.html#i-dont-know"
  },
  {
   "ml": "സാരമില്ല",
@@ -263,13 +263,13 @@
   "r": "Enikku ithu venam",
   "e": "I want this",
   "a": "/audio/ithu-venam-vere-colour.mp3",
-  "u": "/how-to-say-i-want-this-in-malayalam.html"
+  "u": "/malayalam-shopping-phrases.html#i-want"
  },
  {
   "ml": "ചായ / കാപ്പി",
   "r": "Chaaya / Kaapi",
   "e": "Tea / Coffee",
   "a": "/audio/chetta-oru-chaaya.mp3",
-  "u": "/how-to-say-tea-and-coffee-in-malayalam.html"
+  "u": "/malayalam-food-words.html#tea-coffee"
  }
 ]
