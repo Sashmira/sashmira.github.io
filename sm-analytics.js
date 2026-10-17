@@ -23,7 +23,23 @@
       ev('book_lesson', { method: 'form', page: location.pathname });
     } else if (/formsubmit\.co/i.test(act)) {
       var subj = f.querySelector('input[name="_subject"]');
-      if (subj && /starter pack/i.test(subj.value || '')) ev('sign_up', { method: 'starter_pack', page: location.pathname });
+      if (subj && /starter pack/i.test(subj.value || '')) {
+        ev('sign_up', { method: 'starter_pack', page: location.pathname });
+        // Also add the subscriber to MailerLite (Website Free Guide Signup form -> welcome sequence).
+        // The homepage has its own handler (window.smMailerLite); skip there to avoid a double post.
+        if (typeof window.smMailerLite !== 'function') {
+          try {
+            var em = (f.querySelector('input[type=email],input[name=email]') || {}).value;
+            if (em) {
+              var fd = new FormData();
+              fd.append('fields[email]', em);
+              fd.append('ml-submit', '1');
+              fd.append('anticsrf', 'true');
+              fetch('https://assets.mailerlite.com/jsonp/2430406/forms/190157557696824411/subscribe', { method: 'POST', body: fd, mode: 'no-cors', keepalive: true });
+            }
+          } catch (e2) {}
+        }
+      }
       else ev('contact_form_submit', { page: location.pathname });
     } else if (/ml-block-form|mailerlite/i.test((f.className || '') + ' ' + act)) {
       ev('sign_up', { method: 'mailerlite', page: location.pathname });
