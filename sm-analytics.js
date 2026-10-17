@@ -22,9 +22,16 @@
     if (f.id === 'bookForm' || /trial-lesson|book-malayalam/i.test(location.pathname) || /bform|booking/i.test(f.className || '')) {
       ev('book_lesson', { method: 'form', page: location.pathname });
     } else if (/formsubmit\.co/i.test(act)) {
-      ev('contact_form_submit', { page: location.pathname });
+      var subj = f.querySelector('input[name="_subject"]');
+      if (subj && /starter pack/i.test(subj.value || '')) ev('sign_up', { method: 'starter_pack', page: location.pathname });
+      else ev('contact_form_submit', { page: location.pathname });
+    } else if (/ml-block-form|mailerlite/i.test((f.className || '') + ' ' + act)) {
+      ev('sign_up', { method: 'mailerlite', page: location.pathname });
     }
   }, true);
+
+  // Booking-page view (funnel step before a paid lesson request)
+  if (/book-malayalam-trial-lesson/i.test(location.pathname)) ev('booking_page_view', { page: location.pathname });
 
   // --- 2. Cookie banner for Europe-based visitors without a stored choice ---
   var choice = null; try { choice = localStorage.getItem('rrn_consent'); } catch (e) {}
