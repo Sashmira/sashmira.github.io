@@ -374,3 +374,12 @@ malayalam-course-guide-for-calling-grandparents-what-to-learn.html
 malayalam-tutor-help-for-adult-spoken-practice-when-coaching-matters.html
 malayalam-for-beginners-future-tense-basics-step-by-step.html
 malayalam-course-guide-for-self-paced-versus-tutor-supported-learning-what-to-learn.html
+# --- added 2026-10-17 with owner approval: template/plan pages hidden from search (keep noindex, never in sitemap) ---
+malayalam-learning-network.html
+malayalam-site-index.html
+malayalam-membership.html
+ai-malayalam-conversation-partner.html
+ai-malayalam-pronunciation-coach.html
+best-malayalam-course-for-beginners-what-to-look-for.html
+what-makes-a-great-malayalam-tutor-for-beginners.html
+malayalam-family-dictionary.html
