@@ -377,7 +377,7 @@ img,svg,video,iframe{max-width:100%;height:auto}
   .menu-toggle{display:flex}
 }
 </style>
-</head>
+<style>/* CLS fix: reserve portrait space before the image loads */.hero-photo{width:100%;display:flex;justify-content:center}.hp-frame{width:100%}</style></head>
 <body>
 <a href="#top" class="skip">Skip to content</a>
 <div class="topbar">Trusted by learners of all ages in <b>10+ countries</b> · One-to-one lessons across <b>every time zone</b></div>
@@ -432,7 +432,7 @@ img,svg,video,iframe{max-width:100%;height:auto}
         </div>
         </div>
         <div class="hero-photo reveal">
-          <div class="hp-frame"><img decoding="async" src="/portrait.jpg" width="480" height="599" alt="Reshmi R Nair, Malayalam Linguist — Malayalam teacher" loading="eager"></div>
+          <div class="hp-frame"><img decoding="async" fetchpriority="high" src="/portrait.jpg" width="480" height="599" alt="Reshmi R Nair, Malayalam Linguist — Malayalam teacher" loading="eager"></div>
           <div class="hp-badge"><b>Linguist</b><span>Applied Linguistics</span></div>
         </div>
       </div>
