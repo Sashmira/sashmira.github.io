@@ -13,6 +13,7 @@
     if (/calendly\.com/i.test(h)) ev('book_lesson', { method: 'calendly', link_url: h });
     else if (/wa\.me|whatsapp\.com/i.test(h)) ev('whatsapp_click', { link_url: h, page: location.pathname });
     else if (/^mailto:/i.test(h)) ev('email_click', { page: location.pathname });
+    else if (/udemy\.com\/course\//i.test(h)) ev('udemy_click', { link_url: h, course: ((h.match(/course\/([^\/?#]+)/) || [])[1] || ''), coupon: /couponCode=/i.test(h) ? 'yes' : 'no', page: location.pathname });
     else if (/book-malayalam-trial-lesson|#book$|#direct$/i.test(h)) ev('book_cta_click', { link_url: h, page: location.pathname });
   }, true);
 

@@ -1,5 +1,9 @@
 # SpeakMalayalam canonical crawler policy
 User-agent: *
 Allow: /
+# Lead-magnet PDFs: keep them out of search (GitHub Pages cannot send X-Robots-Tag; _headers has no effect there)
+Disallow: /100-malayalam-phrases.pdf
+Disallow: /Kerala-Survival-Malayalam-Cheat-Sheet.pdf
+Disallow: /Malayalam-Pronunciation-Guide.pdf
 
 Sitemap: https://speakmalayalam.com/sitemap.xml
