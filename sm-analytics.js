@@ -11,6 +11,7 @@
     if (!a) return;
     var h = a.getAttribute('href') || '';
     if (/calendly\.com/i.test(h)) ev('book_lesson', { method: 'calendly', link_url: h });
+    else if (/paypal\.me|paypal\.com/i.test(h)) ev('begin_checkout', { method: 'paypal', link_url: h, page: location.pathname });
     else if (/wa\.me|whatsapp\.com/i.test(h)) ev('whatsapp_click', { link_url: h, page: location.pathname });
     else if (/^mailto:/i.test(h)) ev('email_click', { page: location.pathname });
     else if (/udemy\.com\/course\//i.test(h)) ev('udemy_click', { link_url: h, course: ((h.match(/course\/([^\/?#]+)/) || [])[1] || ''), coupon: /couponCode=/i.test(h) ? 'yes' : 'no', page: location.pathname });
